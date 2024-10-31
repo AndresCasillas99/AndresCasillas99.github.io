@@ -41,7 +41,10 @@
             <li><a href="index.html" class="w3-button w3-black">CV</a></li>
             <li><a href="#publications" class="w3-button w3-black">Publications</a></li> 
             <li><a href="#" class="w3-button w3-black">Teaching</a></li> 
-            <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li> 
+            <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
+            <li><a href="books.html" class="w3-button w3-black">Books</a></li> 
+            <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
+            <li><a href="other.html" class="w3-button w3-black">Miscellaneous</a></li> 
         </ul>
       </div>
 	  </div>
@@ -61,7 +64,179 @@
                   <br>
                   <p>One thing that makes cellular automata especially fun is that you can make your own computational experiments with them. </p>
                     <br>
-                    <p>Last update: 30.10.2024</p>
+                    <ul>
+                      <li>Experiment #1: Rule 30's central column.</li>
+                      <li>Experiment #2: An algorithm for calculating square roots.</li>
+                      <li>Experiment #3: Storing large values of Rule 30's rows.</li>
+                    </ul>
+                    <p style="color: rgb(255, 115, 0);">if you are interested in any of these questions or in collaborating with me to try to answer them pease don't hesitate to contact me!!</p>
+                    <h2>Experiment #1: Rule 30's central column</h2>
+                    Since some time ago I have been conducting some experiments regarding the middle column of <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a>.
+                    Is the sequence defined by its values periodic? Are there the same number of 1's and 0's? Some of these questions are addressed more deeply <a href = "https://rule30prize.org/#:~:text=Prize%20Guidelines,(%22the%20Problems%22)">here</a>, where Stephen Wolfram has offered 30,000 USD for any answers.
+                    <br>
+                    I have calculated <a href="Rule30CentralColumn.txt">500,000 values of the central column of Rule 30</a> (and I'm constantly calculated more and more values), as well as the <a href="NotContained.txt">first 100 strings that do not appear in that sequence</a>.
+                    By looking at the array of strings not contained in the sequence, one finds some interesting patterns. Here are, for example, the last 82 strings and their corresponding values when beinginterpreted as binary numbers:
+                    <br>
+                    <br>
+                    <p>
+                      65558 = 10000000000010110
+                      65701 = 10000000010100101
+                      65723 = 10000000010111011
+                      65840 = 10000000100110000
+                      65893 = 10000000101100101
+                      65939 = 10000000110010011
+                      65943 = 10000000110010111
+                      65954 = 10000000110100010
+                      65959 = 10000000110100111
+                      65961 = 10000000110101001
+                      65981 = 10000000110111101
+                      66015 = 10000000111011111
+                      66128 = 10000001001010000
+                      66157 = 10000001001101101
+                      66165 = 10000001001110101
+                      66187 = 10000001010001011
+                      66191 = 10000001010001111
+                      66224 = 10000001010110000
+                      66342 = 10000001100100110
+                      66361 = 10000001100111001
+                      66364 = 10000001100111100
+                      66536 = 10000001111101000
+                      66549 = 10000001111110101
+                      66572 = 10000010000001100
+                      66594 = 10000010000100010
+                      66615 = 10000010000110111
+                      66629 = 10000010001000101
+                      66753 = 10000010011000001
+                      66761 = 10000010011001001
+                      66809 = 10000010011111001
+                      66874 = 10000010100111010
+                      66876 = 10000010100111100
+                      66964 = 10000010110010100
+                      67095 = 10000011000010111
+                      67127 = 10000011000110111
+                      67134 = 10000011000111110
+                      67261 = 10000011010111101
+                      67265 = 10000011011000001
+                      67277 = 10000011011001101
+                      67341 = 10000011100001101
+                      67375 = 10000011100101111
+                      67452 = 10000011101111100
+                      67482 = 10000011110011010
+                      67518 = 10000011110111110
+                      67572 = 10000011111110100
+                      67651 = 10000100001000011
+                      67719 = 10000100010000111
+                      67736 = 10000100010011000
+                      67739 = 10000100010011011
+                      67749 = 10000100010100101
+                      67783 = 10000100011000111
+                      67834 = 10000100011111010
+                      67871 = 10000100100011111
+                      67875 = 10000100100100011
+                      67896 = 10000100100111000
+                      67897 = 10000100100111001
+                      67924 = 10000100101010100
+                      67928 = 10000100101011000
+                      67972 = 10000100110000100
+                      67987 = 10000100110010011
+                      68077 = 10000100111101101
+                      68126 = 10000101000011110
+                      68135 = 10000101000100111
+                      68144 = 10000101000110000
+                      68158 = 10000101000111110
+                      68218 = 10000101001111010
+                      68220 = 10000101001111100
+                      68226 = 10000101010000010
+                      68258 = 10000101010100010
+                      68420 = 10000101101000100
+                      68511 = 10000101110011111
+                      68604 = 10000101111111100
+                      68612 = 10000110000000100
+                      68675 = 10000110001000011
+                      68773 = 10000110010100101
+                      68904 = 10000110100101000
+                      68982 = 10000110101110110
+                      69081 = 10000110111011001
+                      69084 = 10000110111011100
+                      69208 = 10000111001011000
+                      69231 = 10000111001101111
+                      69335 = 10000111011010111
+                      69339 = 10000111011011011
+                      69345 = 10000111011100001
+                    </p>
+                    <br>
+                    Notice how the first couple of them begin with the string 100000000xxxxxxxx, then the following terms begin with the string 100000001xxxxxxxx, then 10000001xxxxxxxxx, then 10000001xxxxxxxxxx, etc. It seems like 
+                    teh digit 1 at the end is simply shifting to the left. It seems reasonable, however, that if the string 10000xxxxxxxxxxxx does not seem to appear, then the value of x doesn't really matter and the structure of the data comes simply 
+                    because I'm searching for the numbers in order. I suspect, however, that with more digits of the middle column of Rule 30 strings of the form 10000xxxxxxxxxxxx will appear and delete many of the current candidates from the list. 
+                    <br>
+                    <br>
+                    It is however interesting to see if some of these numbers survive billions and billions of iterations of Rule 30. Unfortunately I don't have enough computational power to check this, although I'm optimistic that through many small iterations 
+                    every now and then I will be able to collect a significant amount of data and hopefully conjecture some interesting results.
+
+                    <br>
+                    <br>
+                    -------------------------------------------------------------------------------------------------------------
+                    <h2>Experiment #2: An algorithm for calculating square roots</h2>
+                    <br>
+                    Some time ago I described <a href="https://www.youtube.com/watch?v=q4TJa3dZ2v4">an algorithm for cumputing sqrt(2)</a> using <a href="https://sv.wikipedia.org/wiki/Pascals_triangel">Pascal's Triangle</a>. Strictly speaking this is not a cellular automata 
+                    (although one can partially obtain it by computing <a href="https://mathworld.wolfram.com/Rule60.html">Rule 60</a> mod k for a large enough k). Nevertheless I've decided to include it here because I find it very interesting and worth exposing.
+                    Rule 60 is one of the so called "aditive" cellular automata which have <a href="https://content.wolfram.com/sw-publications/2020/07/algebraic-properties-cellular-automata.pdf">very nice properties</a> (like linearity and being easily described by generating functions).
+                    <br>
+                    Anyways, the algorithms reads as follows:
+                    <ul>
+                      <li>1. Compute the n-th row of Pascal's Triangle (the larger the n, the better).</li>
+                      <li>2. Ennumerate the elements of this row, starting from 0.</li>
+                      <li>3. For all elements x in even positions 2k, consider the sum of x*2^(k) for all x in the given row. Denote this sum by X.</li>
+                      <li>4. For all elements y in odd positions 2k+1, consider the sum of y*2^(k) for all y in the given row. Denote this sum by Y.</li></li>
+                      <li>5. Then sqrt(2) is approximately X/Y.</li>
+                    </ul>
+                    <br>
+                    A small example always helps clarifying things. Let n = 5:
+                    <ul>
+                      <li>1. The 5-th row of Pascal's Triangle reads 1,5,10,10,5,1 .</li>
+                      <li>3. X = 1*2^0 + 10*2^1 + 5*2^2 = 41</li>
+                      <li>4. Y = 5*2^0 + 10*2^1 + 1*2^3 = 33</li></li>
+                      <li>5. X/Y = 41/33 = 1.242424... which is <a style="color:red"> APPROXIMATELY </a> sqrt(2)</li>
+                    </ul>
+                    <br>
+                    For n=10 we get X/Y = 1.4142131979695431 which is not too bad. 
+                    <br>
+                    One can give an elementary proof of this algorithm by considering the continous fraction of sqrt(2) (TRY IT!)
+                    <br>
+                    <br>
+                    Another interesting thing is that this algorithm is generalizable to sqrt(n) (and here is where cellular automata come into play):
+                    Instead of Pascal's Triangle, we are going to run Rule 60 mod k (for large k) starting with the initial condition of a single cell with the value n. 
+                    We then repeat the described algorithm in this new setting and we get an approximation of sqrt(n). 
+
+                    <br>
+                    For n=3 and using the 10-th row of Rule 60 we get X/Y = 1.7320261437908496..., and sqrt(3) = 1.732050807...
+                    <br>
+                    <br>
+                    -------------------------------------------------------------------------------------------------------------
+                    <h2>Experiment #3: Storing large values of Rule 30's rows</h2>
+                    <br>
+                    The recursive nature of cellular automata make them computationally painfull to calculate. However, if one has stored the values of a given row, then one can 
+                    calculate all of the following rows of the automata. That's why <a href="Rows.txt">I've calculated and stored the values for rows</a> 100,000 and 200,000 in index format, which means that 
+                    I'm storing the indices of the cells of value 1. If we start with a single cell with the value 1, and we assign that cell the index 0, then the cell directly to the left will have the index -1 and the cell directly to its right will have the value 1.
+                    In this way, the array [-1,0,1] codifies the row with values 111, where the middle 1 lays just below our lonely initial condition valued 1 in index 0. This makes it computationally advantageous to work with since, 
+                    given an indexed array, knowing the value of the central column at that generation reduces to simply asking: is 0 in the array? If so, then the central column has value 1 (since the array stores the indices of the cells which have value 1), otherwise the central column has value 0.
+                    <br>
+                    <br>
+                    For clarity I'll give an example. Consider Rule 30 with the initial condition of a single cell with the value 1:
+                    <br>
+                    <center><img class="img-responsive" src="./Rule30CloseUp.png" alt="Wolfram's Rule 30 close up" 
+                      style="width:500%; text-align:justify"> <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
+                    <p> Here, a cell with value 1 is depicted black, and a cell with value 0 is depicted white. The row index arrays would read:</p>
+                    <ul>
+                      <li>row1 = [0]</li>
+                      <li>row1 = [-1,0,-1]</li>
+                      <li>row2 = [-2,-1,2]</li>
+                      <li>row3 = [-3,-2,0,1,2,3]</li>
+                    </ul>
+                    and so on.
+                    <br>
+                    <br>
+                    <p>Last update: 31.10.2024</p>
                 </div>
             </div> 
 

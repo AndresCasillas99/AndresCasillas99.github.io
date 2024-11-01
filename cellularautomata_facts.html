@@ -38,13 +38,11 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li><a href="index.html" class="w3-button w3-black">Home</a></li>
-            <li><a href="index.html" class="w3-button w3-black">CV</a></li>
-            <li><a href="#publications" class="w3-button w3-black">Publications</a></li> 
-            <li><a href="#" class="w3-button w3-black">Teaching</a></li> 
+            <li><a href="./AcademicCV(Fraunhofer).pdf" class="w3-button w3-black">CV</a></li>
             <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
             <li><a href="books.html" class="w3-button w3-black">Books</a></li> 
             <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
-            <li><a href="other.html" class="w3-button w3-black">Miscellaneous</a></li> 
+            <li><a href="miscellanueos.html" class="w3-button w3-black">Miscellaneous</a></li> 
         </ul>
       </div>
 	  </div>
@@ -215,8 +213,8 @@
                     -------------------------------------------------------------------------------------------------------------
                     <h2>Experiment #3: Storing large values of Rule 30's rows</h2>
                     <br>
-                    The recursive nature of cellular automata make them computationally painfull to calculate. However, if one has stored the values of a given row, then one can 
-                    calculate all of the following rows of the automata. That's why <a href="Rows.txt">I've calculated and stored the values for rows</a> 100,000 and 200,000 in index format, which means that 
+                    The recursive nature of cellular automata make them computationally costly to calculate. However, if one has stored the values of a given row, then one can 
+                    calculate all of the following rows of the automata (with <a href="https://github.com/AndresCasillas99/Rule30">this program</a>). That's why <a href="Rows.txt">I've calculated and stored the values for rows</a> 100,000 and 200,000 in index format, which means that 
                     I'm storing the indices of the cells of value 1. If we start with a single cell with the value 1, and we assign that cell the index 0, then the cell directly to the left will have the index -1 and the cell directly to its right will have the value 1.
                     In this way, the array [-1,0,1] codifies the row with values 111, where the middle 1 lays just below our lonely initial condition valued 1 in index 0. This makes it computationally advantageous to work with since, 
                     given an indexed array, knowing the value of the central column at that generation reduces to simply asking: is 0 in the array? If so, then the central column has value 1 (since the array stores the indices of the cells which have value 1), otherwise the central column has value 0.
@@ -228,7 +226,7 @@
                       style="width:500%; text-align:justify"> <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
                     <p> Here, a cell with value 1 is depicted black, and a cell with value 0 is depicted white. The row index arrays would read:</p>
                     <ul>
-                      <li>row1 = [0]</li>
+                      <li>row0 = [0]</li>
                       <li>row1 = [-1,0,-1]</li>
                       <li>row2 = [-2,-1,2]</li>
                       <li>row3 = [-3,-2,0,1,2,3]</li>
@@ -236,7 +234,7 @@
                     and so on.
                     <br>
                     <br>
-                    <p>Last update: 31.10.2024</p>
+                    <p>Last update: 01.11.2024</p>
                 </div>
             </div> 
 

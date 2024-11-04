@@ -214,7 +214,7 @@
                     <h2>Experiment #3: Storing large values of Rule 30's rows</h2>
                     <br>
                     The recursive nature of cellular automata make them computationally costly to calculate. However, if one has stored the values of a given row, then one can 
-                    calculate all of the following rows of the automata (with <a href="https://github.com/AndresCasillas99/Rule30">this program</a>). That's why <a href="Rows.txt">I've calculated and stored the values for rows</a> 100,000 and 200,000 in index format, which means that 
+                    calculate all of the following rows of the automata (with <a href="https://github.com/AndresCasillas99/Rule30">this program</a>). That's why <a href="Rows1.txt">I've calculated several rows</a> in index format, which means that 
                     I'm storing the indices of the cells of value 1. If we start with a single cell with the value 1, and we assign that cell the index 0, then the cell directly to the left will have the index -1 and the cell directly to its right will have the value 1.
                     In this way, the array [-1,0,1] codifies the row with values 111, where the middle 1 lays just below our lonely initial condition valued 1 in index 0. This makes it computationally advantageous to work with since, 
                     given an indexed array, knowing the value of the central column at that generation reduces to simply asking: is 0 in the array? If so, then the central column has value 1 (since the array stores the indices of the cells which have value 1), otherwise the central column has value 0.
@@ -223,7 +223,7 @@
                     For clarity I'll give an example. Consider Rule 30 with the initial condition of a single cell with the value 1:
                     <br>
                     <center><img class="img-responsive" src="./Rule30CloseUp.png" alt="Wolfram's Rule 30 close up" 
-                      style="max-width:500%; text-align:justify"> <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
+                      style="max-width:100%; text-align:justify"> <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
                     <p> Here, a cell with value 1 is depicted black, and a cell with value 0 is depicted white. The row index arrays would read:</p>
                     <ul>
                       <li>row0 = [0]</li>

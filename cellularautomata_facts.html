@@ -62,13 +62,13 @@
                   <br>
                   <p>One thing that makes cellular automata especially fun is that you can make your own computational experiments with them. </p>
                     <br>
-                    <ul>
-                      <li>Experiment #1: Rule 30's central column.</li>
-                      <li>Experiment #2: An algorithm for calculating square roots.</li>
-                      <li>Experiment #3: Storing large values of Rule 30's rows.</li>
-                    </ul>
+                    <a id="Index"><ul>
+                      <li><a href="#Experiment #1">Experiment #1: Rule 30's central column.</a></li>
+                      <li><a href="#Experiment #2">Experiment #2: An algorithm for calculating square roots.</a></li>
+                      <li><a href="#Experiment #3">Experiment #3: Storing large values of Rule 30's rows.</a></li>
+                    </ul></a>
                     <p style="color: rgb(255, 115, 0);">if you are interested in any of these questions or in collaborating with me to try to answer them pease don't hesitate to contact me!!</p>
-                    <h2>Experiment #1: Rule 30's central column</h2>
+                    <a id="Experiment #1"><h2>Experiment #1: Rule 30's central column</h2></a>
                     Since some time ago I have been conducting some experiments regarding the middle column of <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a>.
                     Is the sequence defined by its values periodic? Are there the same number of 1's and 0's? Some of these questions are addressed more deeply <a href = "https://rule30prize.org/#:~:text=Prize%20Guidelines,(%22the%20Problems%22)">here</a>, where Stephen Wolfram has offered 30,000 USD for any answers.
                     <br>
@@ -170,11 +170,13 @@
                     <br>
                     It is however interesting to see if some of these numbers survive billions and billions of iterations of Rule 30. Unfortunately I don't have enough computational power to check this, although I'm optimistic that through many small iterations 
                     every now and then I will be able to collect a significant amount of data and hopefully conjecture some interesting results.
-
+                    <br>
+                    <br>
+                    <a href="#Index"; style="color: red;"> Back to page index</a>
                     <br>
                     <br>
                     -------------------------------------------------------------------------------------------------------------
-                    <h2>Experiment #2: An algorithm for calculating square roots</h2>
+                    <a id="Experiment #2"><h2>Experiment #2: An algorithm for calculating square roots</h2></a>
                     <br>
                     Some time ago I described <a href="https://www.youtube.com/watch?v=q4TJa3dZ2v4">an algorithm for cumputing sqrt(2)</a> using <a href="https://sv.wikipedia.org/wiki/Pascals_triangel">Pascal's Triangle</a>. Strictly speaking this is not a cellular automata 
                     (although one can partially obtain it by computing <a href="https://mathworld.wolfram.com/Rule60.html">Rule 60</a> mod k for a large enough k). Nevertheless I've decided to include it here because I find it very interesting and worth exposing.
@@ -210,11 +212,16 @@
                     For n=3 and using the 10-th row of Rule 60 we get X/Y = 1.7320261437908496..., and sqrt(3) = 1.732050807...
                     <br>
                     <br>
+                    <a href="#Index"; style="color: red;"> Back to page index</a>
+                    <br>
+                    <br>
+                    <br>
                     -------------------------------------------------------------------------------------------------------------
-                    <h2>Experiment #3: Storing large values of Rule 30's rows</h2>
+                    <a id="Experiment #3"><h2>Experiment #3: Storing large values of Rule 30's rows</h2></a>
                     <br>
                     The recursive nature of cellular automata make them computationally costly to calculate. However, if one has stored the values of a given row, then one can 
-                    calculate all of the following rows of the automata (with <a href="https://github.com/AndresCasillas99/Rule30">this program</a>). That's why <a href="Rows1.txt">I've calculated several rows</a> in index format, which means that 
+                    calculate all of the following rows of the automata (with <a href="https://github.com/AndresCasillas99/Rule30">this program</a>). That's why I've calculated several rows( <a href="Rows1.txt">rows number 100,000; 200,000; 300,0000; 400,000; 500,000;</a> <a href="Rows2.txt">524,999;</a> <a href="Rows3.txt">555,000;</a> <a href="Rows4.txt">675,000;</a> <a href="Rows5.txt">700,000;</a>
+                     <a href="Rows6.txt">800,000; </a> <a href="Rows7.txt">820,000;</a> <a href="Rows8.txt">840,0000</a>) in index format, which means that 
                     I'm storing the indices of the cells of value 1. If we start with a single cell with the value 1, and we assign that cell the index 0, then the cell directly to the left will have the index -1 and the cell directly to its right will have the value 1.
                     In this way, the array [-1,0,1] codifies the row with values 111, where the middle 1 lays just below our lonely initial condition valued 1 in index 0. This makes it computationally advantageous to work with since, 
                     given an indexed array, knowing the value of the central column at that generation reduces to simply asking: is 0 in the array? If so, then the central column has value 1 (since the array stores the indices of the cells which have value 1), otherwise the central column has value 0.
@@ -234,7 +241,10 @@
                     and so on.
                     <br>
                     <br>
-                    <p>Last update: 01.11.2024</p>
+                    <a href="#Index"; style="color: red;"> Back to page index</a>
+                    <br>
+                    <br>
+                    <p>Last update: 08.11.2024</p>
                 </div>
             </div> 
 

@@ -1,1 +1,98 @@
-"Hello World!" 
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Andrés Casillas García de Presno</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--NavBar sizing and styling-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--For YouTube, GitHub, LinkedIn logos-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Styling in general-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<!-- Navigation -->
+	<nav class="navbar navbar-expand-sm navbar-dark text-success" role="navigation" >
+	  <div class="container w3-bar w3-pink w3-large">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+    
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html" class="w3-button w3-black">Home</a></li>
+            <li><a href="./AcademicCV(Fraunhofer).pdf" class="w3-button w3-black">CV</a></li>
+            <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
+            <li><a href="books.html" class="w3-button w3-black">Books</a></li> 
+            <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
+            <li><a href="miscellanueos.html" class="w3-button w3-black">Miscellaneous</a></li> 
+        </ul>
+      </div>
+	  </div>
+	</nav>
+  
+  <!-- Page Content -->
+    <div class="container" style="font-family: serif; font-size: large;">
+
+        <div class="row">
+
+            <!-- Entries Column -->
+            <div class="col-xs-8" style="height: 100vh;">
+                
+                <!-- Main Image -->
+                
+                <div class = "smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
+                  <h1 style="text-align:center;color: rgb(177, 0, 86); background-color:rgb(0, 0, 0); font-style: oblique; font-weight: bolder;">Some nice cellular automata :)</h1>
+                  <br>
+                  <a href="https://content.wolfram.com/sw-publications/2020/07/algebraic-properties-cellular-automata.pdf">One can codify linear cellular automata with polynomials.</a> I've computed many of such cellular automata and I'm pleased to share them here,
+                   accompanied by their "evolution's polynomial".
+                  <br>
+                  <ul>
+                    <li><a href="pascal_mod.html"><h3>Pascal's Triangle mod m for  m = 2,...,41</h3></a></li>
+                    <li><a href="dynamic_CA.html"><h3>Dynamical cellular automata</h3></a></li>
+                    <li><a href="generalization_pascal.html"><h3>Generalizations of Pascal's Triangle</h3></a></li>
+                  </ul>
+              </div>
+                    <br>
+                    <p>Last update: 10.11.2024</p>
+                </div>
+            </div> 
+
+            <!-- Stuff on the Sidebar -->
+            <div class="col-xs-4">
+              <center><img class="img-responsive" src="./Rule30.png" alt="Wolfram's Rule 30" 
+                style="max-width:100%; text-align:justify"> The beautiful and intriguing <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
+                <br>
+              <center><img class="img-responsive" src="./NumerosPentagonales.png" alt="Euler's pentagonal number theorem encoded in a cellular automata" 
+                style="max-width:100%; text-align:justify"> This automata encodes <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">Euler's pentagonal number theorem</a>: different colors represent the values 1,0, or -1.</center>
+          </div>
+
+            
+            
+            
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+</body>
+
+</html>
+

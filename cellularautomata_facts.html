@@ -66,6 +66,7 @@
                       <li><a href="#Experiment #1">Experiment #1: Rule 30's central column.</a></li>
                       <li><a href="#Experiment #2">Experiment #2: An algorithm for calculating square roots.</a></li>
                       <li><a href="#Experiment #3">Experiment #3: Storing large values of Rule 30's rows.</a></li>
+                      <li><a href="#Experiment #4">Experiment #4: A random number generator based on Rule 30's central column.</a></li>
                     </ul></a>
                     <p style="color: rgb(255, 115, 0);">if you are interested in any of these questions or in collaborating with me to try to answer them pease don't hesitate to contact me!!</p>
                     <a id="Experiment #1"><h2>Experiment #1: Rule 30's central column</h2></a>
@@ -333,7 +334,7 @@
                     <br>
                     The recursive nature of cellular automata make them computationally costly to calculate. However, if one has stored the values of a given row, then one can 
                     calculate all of the following rows of the automata (with <a href="https://github.com/AndresCasillas99/Rule30">this program</a>). That's why I've calculated several rows( <a href="Rows1.txt">rows number 100,000; 200,000; 300,0000; 400,000; 500,000;</a> <a href="Rows2.txt">524,999;</a> <a href="Rows3.txt">555,000;</a> <a href="Rows4.txt">675,000;</a> <a href="Rows5.txt">700,000;</a>
-                     <a href="Rows6.txt">800,000; </a> <a href="Rows7.txt">820,000;</a> <a href="Rows8.txt">840,0000</a>) in index format, which means that 
+                     <a href="Rows6.txt">800,000; </a> <a href="Rows7.txt">820,000;</a> <a href="Rows8.txt">840,0000</a> and finally <a href="Rows9.txt">1,000,000</a>) in index format, which means that 
                     I'm storing the indices of the cells of value 1. If we start with a single cell with the value 1, and we assign that cell the index 0, then the cell directly to the left will have the index -1 and the cell directly to its right will have the value 1.
                     In this way, the array [-1,0,1] codifies the row with values 111, where the middle 1 lays just below our lonely initial condition valued 1 in index 0. This makes it computationally advantageous to work with since, 
                     given an indexed array, knowing the value of the central column at that generation reduces to simply asking: is 0 in the array? If so, then the central column has value 1 (since the array stores the indices of the cells which have value 1), otherwise the central column has value 0.
@@ -355,8 +356,46 @@
                     <br>
                     <a href="#Index"; style="color: red;"> Back to page index</a>
                     <br>
+                    -------------------------------------------------------------------------------------------------------------
+                    <a id="Experiment #4"><h2>Experiment #4: A random number generator based on Rule 30's central column.</h2></a>
                     <br>
-                    <p>Last update: 12.11.2024</p>
+                    <a href="https://github.com/AndresCasillas99/PseudoRandomNumberGeneratorR30-Matrix-">(You can find the algorithm described below here.)</a>
+                    <br>
+                    <p>Given the following image 
+                    <center><img class="img-responsive" src="./R30CentralColumn_1000x1000.png" alt="1 million values of R30's central column" 
+                      style="max-width:50%; text-align:justify"> 1 million values of R30's central column.</center>
+                    one can think of the following algorithm for, given k>0, generating a random number between 0 and 2^k:
+                    <ol>
+                      <li> Choose a random point (x,y) from the image above. 
+                      <li> Choose a random direction (right, diagonal right up, up, diagonal left up, left, diagonal left down, down, diagonal right down)
+                      <li> Read k bits starting from (x,y) and in the chosen direction.
+                    </ol>
+                    <br>
+                    A few consideration for the implementation of the algorithm:
+                    <ol>
+                      <li> The image is 1,000 x 1,000 pixels, so the random point (x,y) should be chosen in a way that x and y live in the interval (k,1000-k) in order to be able to read k pixels in any direction.
+                      <li> The directions can simpy be encoded by numbers from 1 to 8.
+                      <li> I belive this algorithm to be highly dependant on the choice of (x,y), so for benchmarking I'll just use Julia's random number generator for choosing the initial values of (x,y). 
+                        In practice I believe a good idea would be to ask the user for two random x,y or get them from the system somehow. 
+                    </ol>
+                    </p>
+                    I ran the algorithm 11 million times selecting numbers of maximum 10 bits (from 0 to 512 in base 10) and got quite a nice uniform distribution, 
+                    which seems to indicate that the the algorithm seems to produce random uniform numbers. (DISCLAIMER: SAYING THAT THE FACT THAT THE ALGORIHTMS SEEMS
+                     TO PRODUCE UNIFORM RANDOM OUTPUTS IMPLIES THAT THE VALUES OF THE CENTRAL COLUMN OF RULE 30 ARE RANDOMLY AND UNIFORMILY DISTRIBUTED ARE <a style="color: red;">BIG WORDS
+                      WHICH I HAVE NOT SAID </a>).
+                    <br>
+                    <br>
+                    Anyway, here's a plot of my benchmarks:
+                    <center><img class="img-responsive" src="./benchmarking_array_k=9.png" alt="11 million runs of the algorithm" 
+                      style="max-width:100%; text-align:justify"> Number of appearances of each number from 1 to 512 for 11 million runs.</center>
+                    <br>
+                    <center><img class="img-responsive" src="./benchmarking_array_k=9_2.png" alt="11 million runs of the algorithm" 
+                      style="max-width:100%; text-align:justify"> Zoom in the interesting region.</center>
+                    <br>
+                    The sudden fall to 0 is explained by the fact that 512 = 2^9 is the first number to have 10 bits and the runs were made by taking only 9 bits.
+                    <br>
+                    <br>
+                    <p>Last update: 14.11.2024</p>
                 </div>
             </div> 
 

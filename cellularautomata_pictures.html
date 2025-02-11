@@ -19,6 +19,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Set the last update date
+      var lastUpdateSpan = document.getElementById("last-update");
+      var currentDate = new Date();
+      var formattedDate = ("0" + currentDate.getDate()).slice(-2) + "."
+                        + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "."
+                        + currentDate.getFullYear();
+      lastUpdateSpan.textContent = formattedDate;
+    });
+  </script>
 </head>
 <body>
 
@@ -75,7 +86,7 @@
                   </ul>
               </div>
                     <br>
-                    <p>Last update: 24.11.2024</p>
+                    <p>Last update: <span id="last-update"></span></p>
             </div> 
 
             <!-- Stuff on the Sidebar -->

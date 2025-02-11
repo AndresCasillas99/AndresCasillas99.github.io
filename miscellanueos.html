@@ -19,6 +19,65 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <style>
+    #header-summary {
+      font-family: serif;
+      font-size: large;
+      text-align: center
+      margin-top: 20px;
+    }
+    #header-summary h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    #header-summary ul {
+      list-style-type: disc;
+      padding-left: 0;
+      display: inline-block;
+      text-align: left;
+    }
+    #header-summary ul li {
+      margin-bottom: 5px;
+    }
+    #header-summary ul li a {
+      font-size: 1.5em;
+      text-decoration: none;
+      display: block;
+      padding: 5px;
+      background-color:  rgb(41, 64, 114);
+      color: yellow;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var headers = document.querySelectorAll("h1");
+      var headerDiv = document.getElementById("header-summary");
+      var ul = document.createElement("ul");
+      headers.forEach(function(header, index) {
+        var id = "header-" + index;
+        header.id = id;
+        var li = document.createElement("li");
+        var link = document.createElement("a");
+        link.href = "#" + id;
+        link.textContent = header.textContent;
+        link.style.color = header.style.color;
+        link.style.backgroundColor = header.style.backgroundColor;
+        li.appendChild(link);
+        ul.appendChild(li);
+      });
+      headerDiv.appendChild(ul);
+
+  
+      // Set the last update date
+      var lastUpdateSpan = document.getElementById("last-update");
+      var currentDate = new Date();
+      var formattedDate = ("0" + currentDate.getDate()).slice(-2) + "."
+                        + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "."
+                        + currentDate.getFullYear();
+      lastUpdateSpan.textContent = formattedDate;
+    });
+  </script>
 </head>
 <body>
 
@@ -47,7 +106,12 @@
       </div>
 	  </div>
 	</nav>
-  
+
+  <!-- Header Summary -->
+<div id="header-summary", style="text-align: center;">
+  <h2></h2>
+</div>
+
   <!-- Page Content -->
     <div class="container" style="font-family: serif; font-size: large;">
 
@@ -486,7 +550,7 @@
                       </tbody>
                     </table>
                     <br>  
-                    <p>Last update: 07.02.2025</p>
+                    <p>Last update: <span id="last-update"></span></p>
                 </div>
             </div> 
 

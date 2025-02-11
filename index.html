@@ -13,6 +13,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Set the last update date
+      var lastUpdateSpan = document.getElementById("last-update");
+      var currentDate = new Date();
+      var formattedDate = ("0" + currentDate.getDate()).slice(-2) + "."
+                        + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "."
+                        + currentDate.getFullYear();
+      lastUpdateSpan.textContent = formattedDate;
+    });
+  </script>
 </head>
 <body>
 
@@ -57,16 +68,27 @@
         <p>My main interests lie in computability theory, numerics (numerical lineal algebra, numerical analysis, numerical number theory), and dynamical systems.</p>
         <br>
         <br>
+        A map of the best "taquerías" in Mexico City:
         <br>
+        <br>
+        <!-- Google Map Embed -->
+        <iframe
+        width="100%"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/d/u/0/embed?mid=1L90r_5nfeq6DIjPmFn7RuokIDcO43K4&ehbc=2E312F" allowfullscreen>
+        </iframe>
+        <!--
         <div class="row">
           <div class="column">
-            <center><img class="img-responsive" src="./CellularAutomata1.png" alt="A very nice dynamic cellular automata" style="width:100%; text-align:justify"></center> A very nice dynamic cellular automata with neighborhood N_t = (-t,0,t)
+            <center><img class="img-responsive" src="./CellularAutomata1.png" alt="A very nice dynamic cellular automata" style="width:50%; text-align:justify"></center> A very nice dynamic cellular automata with neighborhood N_t = (-t,0,t)
           </div>
         </div>
+        -->
         <br>
         <br>
         <br>
-        <p>Last update: 07.02.2025</p>
+        <p>Last update: <span id="last-update"></span></p>
       </div>
     </div>
 
@@ -84,10 +106,18 @@
     </div>
 
     <!-- Links on the Sidebar -->
-    <div class="col-md-4" style="margin-top:2%">
+    <div class="col-xs-4">
       <dd><i class="fa fa-youtube-play" style="font-size:48px;color:red"></i> <a href="https://www.youtube.com/@ElIrracional">YouTube</a></dd>
       <dd><i class="fa fa-github" style="font-size:48px;color:black"></i><a href="https://github.com/AndresCasillas99">GitHub</a></dd>
       <dd><i class="fa fa-linkedin-square" style="font-size:48px;color:rgb(0, 119, 181)"></i><a href="https://www.linkedin.com/in/andr%C3%A9s-casillas-garc%C3%ADa-de-presno-094b03329/">LinkedIn</a></dd>
+      <!-- Google Map Embed
+      <iframe
+      width="100%"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d40405.24586374944!2d7.062766887514595!3d50.732407587856116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bee13f238b51df%3A0x6c4dac808d99b4cf!2sMathematik%20Zentrum%20der%20Universit%C3%A4t%20Bonn!5e0!3m2!1sen!2sde!4v1739287686780!5m2!1sen!2sde" allowfullscreen>
+    </iframe>
+    -->
     </div>
   </div>
 </div>

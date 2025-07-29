@@ -36,7 +36,8 @@
   }
   </style>
 </head>
-<body>
+<body style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><text x=%220%22 y=%2232%22 font-size=%2232%22 opacity=%220.2%22>⚽️</text></svg>'); background-repeat: repeat; background-size: 48px 48px; background-color: #fff;">
+
 
 
 <!-- Navigation -->
@@ -73,24 +74,51 @@
     <div class="col-xs-12" style="min-height: 100vh;">
       <div class="smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
         <h1 style="
-          text-align:center;
-          font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
-          font-size: 2.2em;
-          color: #071cf8;
-          background: linear-gradient(to right, #ffff00 10%, #ff6600 40%, #ff0000 90%);
-          border: 4px double #ff0000;
-          padding: 12px 0;
-          margin-bottom: 20px;
-          text-shadow: 2px 2px 0 #ffff00, 4px 4px 0 #ff0000, 6px 6px 0 #000;
-        ">
-          <marquee behavior="alternate" scrollamount="12" style="width:90%;">
-            🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥<br>
-            (some of) My Projects (some of) My Projects (some of) My Projects <br>
-            🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-          </marquee>
-        </h1>
+        text-align:center;
+        font-family: 'Georgia', 'Times New Roman', Times, serif;
+        font-size: 2.2em;
+        color: #000000;
+        background: linear-gradient(to right, #ffff00 10%, #ff6600 40%, #ff0000 90%);
+        border: 4px double #ff0000;
+        padding: 18px 0 12px 0;
+        margin-bottom: 24px;
+        text-shadow: 1px 1px 0 #ffff00, 2px 2px 0 #ff0000, 3px 3px 0 #000;
+        letter-spacing: 1.5px;
+        overflow: hidden;
+        position: relative;
+      ">
+        <span style="
+          display: inline-block;
+          white-space: nowrap;
+          animation: scroll-title 12s linear infinite;
+          font-size: 1.1em;
+          ">
+          &#128293;&#128293;&#128293; (some of) My Projects &nbsp; (some of) My Projects &nbsp; (some of) My Projects &#128293;&#128293;&#128293;
+        </span>
+        <style>
+          @keyframes scroll-title {
+            0% { transform: translateX(0);}
+            100% { transform: translateX(-100%);}
+          }
+        </style>
+      </h1>
+      <div style="
+        display: inline-block;
+        background: linear-gradient(90deg, #fffbe6 0%, #e3e6ff 100%);
+        border: 3px solid #002f6c;
+        border-radius: 14px;
+        box-shadow: 0 0 16px #002f6c22, 0 0 4px #ffc62755;
+        padding: 14px 28px;
+        margin: 24px auto 0 auto;
+        font-family: 'Georgia', 'Times New Roman', Times, serif;
+        font-size: 1.3em;
+        color: #002f6c;
+        text-shadow: 0 1px 0 #fff, 0 0 2px #ffc627;
+        letter-spacing: 1px;
+        text-align: center;
+      ">
         <br
-        <p>In the last few years I've coded quite a lot (enjoyed it a lot as well!), and some of my coding time has turned into actual projects. 
+        <p>In the last few years I've coded quite a lot (enjoyed it a lot as well!), and some of my coding time has transformed into actual projects. 
             Most of them can be found in my <a href="https://github.com/AndresCasillas99" target="_blank">GitHub </a> account. Nonetheless, here I will list some of the most interesting ones, with a brief description and some useful links.
             Hope you enjoy!!!
         </p>
@@ -179,7 +207,24 @@
           </li>
         </ul>
         <br>
-        <p>Last update: <span id="last-update">17.07.2025</span></p>
+      </div>
+        <div style="
+        display: inline-block;
+        background: linear-gradient(90deg, #ff00cc 0%, #00ffff 100%);
+        border: 4px double #fff700;
+        border-radius: 16px;
+        box-shadow: 0 0 24px #00ffff99, 0 0 8px #ff00cc99;
+        padding: 10px 28px;
+        margin: 24px auto 0 auto;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
+        font-size: 1.3em;
+        color: #fff700;
+        text-shadow: 2px 2px 8px #ff00cc, 2px 2px 0 #000, 0 0 8px #00ffff;
+        letter-spacing: 2px;
+        text-align: center;
+      ">
+        <span style="font-size:1.2em;">🕹️ Last update: <b>29.07.2025</b> 🕹️</span>
+      </div>
       </div>
     </div>
   </div>

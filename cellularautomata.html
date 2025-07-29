@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
 
 <html lang="en">
 <head>
@@ -30,16 +25,11 @@
       lastUpdateSpan.textContent = formattedDate;
     });
   </script>
-  <style>
-  @media (max-width: 600px) {
-    img {
-      display: none !important;
-    }
-  }
-  </style>
 </head>
-<body>
-
+<body style="
+  background: linear-gradient(120deg, #181c24 0%, #232526 60%, #00eaff 100%);
+  color: #e0f7fa;
+">
 
 <!-- Navigation -->
 	<nav class="navbar navbar-expand-sm navbar-dark text-success" role="navigation" >
@@ -67,7 +57,7 @@
 	  </div>
 	</nav>
   
-  <!-- Page Content -->
+<!-- Page Content -->
     <div class="container" style="font-family: serif; font-size: large;">
 
         <div class="row">
@@ -76,54 +66,113 @@
             <div class="col-xs-8" style="height: 100vh;">
                 
                 <!-- Main Image -->
-                
                 <div class = "smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
                   <h1 style="
-                    text-align:center;
-                    font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
-                    font-size: 2.2em;
-                    color: #fff700;
-                    background: linear-gradient(to right, #6a00ff 0%, #000000 50%, #00eaff 100%);
-                    border: 4px double #00eaff;
-                    padding: 12px 0;
-                    margin-bottom: 20px;
-                    text-shadow: 2px 2px 0 #00eaff, 4px 4px 0 #6a00ff, 6px 6px 0 #000;
-                    letter-spacing: 2px;
-                    -webkit-text-stroke: 1.5px #6a00ff;
-                  ">
-                    <marquee behavior="alternate" scrollamount="12" style="width:90%;">
-                      <div style="width:100%; text-align:center;">
-                        🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀<br>
-                        <span style="display:inline-block; width:100%; text-align:center; font-size:1.2em;">
-                          This is by far the most interesting entry in this website!!
-                        </span><br>
-                        🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀🛸🚀
-                      </div>
-                    </marquee>
+                  text-align: center;
+                  font-family: 'Georgia', 'Times New Roman', Times, serif;
+                  font-size: 2.2em;
+                  color: #fff;
+                  background: linear-gradient(to right, #6a00ff 0%, #000000 50%, #00eaff 100%);
+                  border: 4px double #00eaff;
+                  padding: 18px 0 12px 0;
+                  margin-bottom: 24px;
+                  text-shadow: 2px 2px 0 #222, 4px 4px 0 #6a00ff, 6px 6px 0 #000;
+                  letter-spacing: 2px;
+                  -webkit-text-stroke: 1px #222;
+                  overflow: hidden;
+                  position: relative;
+                ">
+                    <span style="
+                      display: inline-block;
+                      white-space: nowrap;
+                      animation: scroll-classic 10s linear infinite;
+                      font-size: 1.15em;
+                      padding: 0 0.5em;
+                      color: #fff;
+                      text-shadow: 1px 1px 2px #000, 0 0 6px #00eaff;
+                    ">
+                      🛸🚀🛸🚀🛸&nbsp;This is by far the most interesting entry in this website!!&nbsp;🛸🚀🛸🚀
+                    </span>
+                    <style>
+                      @keyframes scroll-classic {
+                        0% { transform: translateX(0%);}
+                        100% { transform: translateX(-100%);}
+                      }
+                    </style>
                   </h1>
+                </div>
+                <div class = "smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
+                  <div style="
+                  display: inline-block;
+                  background: linear-gradient(90deg, #fffbe6 0%, #e3e6ff 100%);
+                  border: 3px solid #002f6c;
+                  border-radius: 14px;
+                  box-shadow: 0 0 16px #002f6c22, 0 0 4px #ffc62755;
+                  padding: 14px 28px;
+                  margin: 24px auto 0 auto;
+                  font-family: 'Georgia', 'Times New Roman', Times, serif;
+                  font-size: 1.3em;
+                  color: #002f6c;
+                  text-shadow: 0 1px 0 #fff, 0 0 2px #ffc627;
+                  letter-spacing: 1px;
+                  text-align: center;
+                ">
                   <br>
-                  I've noticed that I want to write way too much here so I've organized my ideas in the following bullet points:
-                  <br>
-                  <ul>
-                    <li><a href="cellularautomata_what.html">What are cellular automata?</a></li>
-                    <li><a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html">Elementary cellular automata</a></li>
-                    <li><a href="cellularautomata_facts.html">Some cool experiments and facts</a></li>
-                    <li><a href="cellularautomata_pictures.html">Examples and more</a></li>
-                    <li><a href="cellularautomata_talks.html">Some talks I've given on cellular automata.</a></li>
-                  </ul>
+                    I've noticed that I want to write way too much here so I've organized my ideas in the following bullet points:
                     <br>
-                    <p>Last update: 13.04.2025</p>
+                    <ul>
+                      <li><a href="cellularautomata_what.html">What are cellular automata?</a></li>
+                      <li><a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html">Elementary cellular automata</a></li>
+                      <li><a href="cellularautomata_facts.html">Some cool experiments and facts</a></li>
+                      <li><a href="cellularautomata_pictures.html">Examples and more</a></li>
+                      <li><a href="cellularautomata_talks.html">Some talks I've given on cellular automata.</a></li>
+                    </ul>
+                      <br>
+                    </div>
+                    <div style="
+                    display: inline-block;
+                    background: linear-gradient(90deg, #ff00cc 0%, #00ffff 100%);
+                    border: 4px double #fff700;
+                    border-radius: 16px;
+                    box-shadow: 0 0 24px #00ffff99, 0 0 8px #ff00cc99;
+                    padding: 10px 28px;
+                    margin: 24px auto 0 auto;
+                    font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
+                    font-size: 1.3em;
+                    color: #fff700;
+                    text-shadow: 2px 2px 8px #ff00cc, 2px 2px 0 #000, 0 0 8px #00ffff;
+                    letter-spacing: 2px;
+                    text-align: center;
+                  ">
+                    <span style="font-size:1.2em;">🕹️ Last update: <b>29.07.2025</b> 🕹️</span>
+                  </div>
                 </div>
             </div> 
 
             <!-- Stuff on the Sidebar -->
             <div class="col-xs-4">
+              <div style="
+                  display: inline-block;
+                  background: linear-gradient(90deg, #fffbe6 0%, #e3e6ff 100%);
+                  border: 3px solid #002f6c;
+                  border-radius: 14px;
+                  box-shadow: 0 0 16px #002f6c22, 0 0 4px #ffc62755;
+                  padding: 14px 28px;
+                  margin: 24px auto 0 auto;
+                  font-family: 'Georgia', 'Times New Roman', Times, serif;
+                  font-size: 1.3em;
+                  color: #002f6c;
+                  text-shadow: 0 1px 0 #fff, 0 0 2px #ffc627;
+                  letter-spacing: 1px;
+                  text-align: center;
+                ">
               <center><img class="img-responsive" src="./Rule30.png" alt="Wolfram's Rule 30" 
                 style="max-width:100%; text-align:justify"> The beautiful and intriguing <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
                 <br>
               <center><img class="img-responsive" src="./NumerosPentagonales.png" alt="Euler's pentagonal number theorem encoded in a cellular automata" 
                 style="max-width:100%; text-align:justify"> This automata encodes <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">Euler's pentagonal number theorem</a>: different colors represent the values 1,0, or -1.</center>
               </p>
+              </div>
           </div>
 
             
@@ -135,5 +184,6 @@
     </div>
     <!-- /.container -->
 </body>
+
 
 </html>

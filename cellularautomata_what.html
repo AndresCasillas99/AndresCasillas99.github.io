@@ -1,115 +1,84 @@
-<!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
-<html lang="en">
+<html>
 <head>
-  <title>Andrés Casillas García de Presno</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--NavBar sizing and styling-->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!--For YouTube, GitHub, LinkedIn logos-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--Styling in general-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Set the last update date
-      var lastUpdateSpan = document.getElementById("last-update");
-      var currentDate = new Date();
-      var formattedDate = ("0" + currentDate.getDate()).slice(-2) + "."
-                        + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "."
-                        + currentDate.getFullYear();
-      lastUpdateSpan.textContent = formattedDate;
-    });
-  </script>
-</head>
-<body>
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-expand-sm navbar-dark text-success" role="navigation" >
-	  <div class="container w3-bar w3-pink w3-large">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
+    <title>Andrés Casillas García de Presno</title>
+    <!--for GitHub, Youtube and LinkedIn logos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html { font-size: 16px; }
+    body { font-family: monospace; color:  white; }
     
+    a { color: yellow; } /* yellow hyperlinks */
+    a:visited { color: #e6c200; }
+    a:hover, a:focus { color: #fff066; text-decoration: underline; }
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li><a href="index.html" class="w3-button w3-black">Home</a></li>
-            <li><a href="./AcademicCV(Fraunhofer).pdf" class="w3-button w3-black">CV</a></li>
-            <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
-            <li><a href="books.html" class="w3-button w3-black">Books</a></li> 
-            <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
-            <li><a href="miscellanueos.html" class="w3-button w3-black">Miscellaneous</a></li> 
-        </ul>
-      </div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container" style="font-family: serif; font-size: large;">
 
-        <div class="row">
+    h1 { font-size: 2rem; }    /*means twice the html font-size*/
+    h2 { font-size: 1.25rem; } 
+    p  { font-size: 1rem; }    
 
-            <!-- Entries Column -->
-            <div class="col-xs-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                
-                <div class = "smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
-                  <br>
-                  <p>I've been fascinated with cellular automata ever since I read Wolfram's <a href = "https://www.wolframscience.com/nks/">New Kind of Science.</a> 
-                    One can think of cellular automata as the simplest (deterministic) models of simple entities interacting with each other, and soon enough they become surprisinlgy unpredictable and hard to describe in mathematical terms.
-                    <br>
-                    <br> 
-                    I like to explain cellular automata in the following way: picture a checkerboard (an infinite checkerboard, actually) with all cells colored white except for the middle cell, which will be colored black. At every second, the cells in this checkerboard are going to change colors according to some fixed rule. 
-                    For example, let's say that if a cell has a neighboring black cell, then at the next second it will turn black. Otherwise, it will remain white. What's the state of the blackboard in, say, one hour? 
-                    
-                    <center><img class="img-responsive" src="./Checkboard.png" alt="Initial state of a simple cellular automata" 
-                    style="max-width:25%; text-align:justify"></center>
-                    
-                    It is not hard to see that with this rule, the whole checkboard quickly becomes black (is this evident for you?), 
-                    since the neighboring cells of the initially black cell will turn black, and then their neighbors will turn black, and then the neighbors of their neighbors, and so on. Quite simple, right?
-                    But what happens with a smarter rule? Say, something like: if a black cell has exactly two or three black neighbors, then it will remain black in the next second. If a white cell has exaclty three black neighbors, it will become black in the next iteration. If none of these two scenarios occur, the cell will become white in the next second.
-                    What will be, then, the color of our checkerboard after an hour? In this case, after just one second every cell will be white, since there are too few black cells to start with. But what if we had more black cells in the beginning? Well, turns out that 
-                    this set of rules are as powerful as any computer (like the one you are using to read this, right now). You've basically just discovered <a href = "https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> (which is <a href = "https://en.wikipedia.org/wiki/Turing_completeness">Turing complete</a> and can simulate a <a href = "https://en.wikipedia.org/wiki/Von_Neumann_universal_constructor">universal constructor</a> or any other Turing machine: that's what I mean by as powerful as any computer).
-                    
-                    <br>
-                    <center><img class="img-responsive" src="./GliderCannon.png" alt="A glider cannon in Conway's Game of Life" 
-                      style="max-width:25%; text-align:justify"> A <a href="https://en.wikipedia.org/wiki/Gun_(cellular_automaton)">glider cannon</a> in Conway's Game of Life</center>
-                    <br>
-                    Knowing what happens with the checkboard in one hour, or two, or what the state of the checkboard will be as time tends to infinity
-                    is an extremely difficult question to answer, and this is the case with many cellular automata. We simply can't capture them with mathematics (<a href="https://www.stephenwolfram.com/publications/cellular-automata-complexity/">or can we?</a>).</p>
-                    
-                    
-                    <br>
-                    <p>Last update: 20.11.2024</p>
-                </div>
-            </div> 
+    @media (max-width: 600px) {
+      html { font-size: 14px; } /* smaller on phones */
+    }
+  </style>
+</head>
 
-            <!-- Stuff on the Sidebar -->
-            <div class="col-xs-4">
-              <center><img class="img-responsive" src="./Rule30.png" alt="Wolfram's Rule 30" 
-                style="max-width:100%; text-align:justify"> The beautiful and intriguing <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
-                <br>
-              <center><img class="img-responsive" src="./NumerosPentagonales.png" alt="Euler's pentagonal number theorem encoded in a cellular automata" 
-                style="max-width:100%; text-align:justify"> This automata encodes <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">Euler's pentagonal number theorem</a>: different colors represent the values 1,0, or -1.</center>
-              </p>
-          </div>
+<body style="background-color: black;">
+    <div style="color: white;">
+      <br>
+      <p>I've been fascinated with cellular automata ever since I read Wolfram's <a href = "https://www.wolframscience.com/nks/">New Kind of Science.</a> 
+        One can think of cellular automata as the simplest (deterministic) models of simple entities interacting with each other, and soon enough they become surprisinlgy unpredictable and hard to describe in mathematical terms.
+        <br>
+        <br> 
+        I like to explain cellular automata in the following way: picture a checkerboard (an infinite checkerboard, actually) with all cells colored white except for the middle cell, which will be colored black. At every second, the cells in this checkerboard are going to change colors according to some fixed rule. 
+        For example, let's say that if a cell has a neighboring black cell, then at the next second it will turn black. Otherwise, it will remain white. What's the state of the blackboard in, say, one hour? 
+        
+        <center><img class="img-responsive" src="./Checkboard.png" alt="Initial state of a simple cellular automata" 
+        style="max-width:25%; text-align:justify"></center>
+        
+        It is not hard to see that with this rule, the whole checkboard quickly becomes black (is this evident for you?), 
+        since the neighboring cells of the initially black cell will turn black, and then their neighbors will turn black, and then the neighbors of their neighbors, and so on. Quite simple, right?
+        But what happens with a smarter rule? Say, something like: if a black cell has exactly two or three black neighbors, then it will remain black in the next second. If a white cell has exaclty three black neighbors, it will become black in the next iteration. If none of these two scenarios occur, the cell will become white in the next second.
+        What will be, then, the color of our checkerboard after an hour? In this case, after just one second every cell will be white, since there are too few black cells to start with. But what if we had more black cells in the beginning? Well, turns out that 
+        this set of rules are as powerful as any computer (like the one you are using to read this, right now). You've basically just discovered <a href = "https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> (which is <a href = "https://en.wikipedia.org/wiki/Turing_completeness">Turing complete</a> and can simulate a <a href = "https://en.wikipedia.org/wiki/Von_Neumann_universal_constructor">universal constructor</a> or any other Turing machine: that's what I mean by as powerful as any computer).
+        
+        <br>
+        <center><img class="img-responsive" src="./GliderCannon.png" alt="A glider cannon in Conway's Game of Life" 
+          style="max-width:25%; text-align:justify"><figcaption> A <a href="https://en.wikipedia.org/wiki/Gun_(cellular_automaton)">glider cannon</a> in Conway's Game of Life </figcaption></center>
+        <br>
+        Knowing what happens with the checkboard in one hour, or two, or what the state of the checkboard will be as time tends to infinity
+        is an extremely difficult question to answer, and this is the case with many cellular automata. We simply can't capture them with mathematics (<a href="https://www.stephenwolfram.com/publications/cellular-automata-complexity/">or can we?</a>).</p>
+        
+        
+        <br>
+        
+    </div>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start;text-align:center;padding:12px 0;">
+  <figure style="margin:0;">
+    <img class="img-responsive" src="./Rule30.png" alt="Wolfram's Rule 30" 
+    style="max-width:50%; text-align:justify"><figcaption> The beautiful and intriguing <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></figcaption>
+    <br>
+  </figure>
 
+  <figure style="margin:0;">
+    <img class="img-responsive" src="./NumerosPentagonales.png" alt="Euler's pentagonal number theorem encoded in a cellular automata" 
+    style="max-width:50%; text-align:justify"><figcaption>This automata encodes <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">Euler's pentagonal number theorem</a>: different colors represent the values 1,0, or -1.</figcaption>
+  </figure>
+</div>
+  <h1>Menu</h1>
+    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+        
+        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+        
+        <li><a href="index_copy.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+        
+    </ul>
             
             
             

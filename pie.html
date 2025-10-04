@@ -1,88 +1,54 @@
-<!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
-<html lang="en">
+<html>
 <head>
-  <title>Andrés Casillas García de Presno</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--NavBar sizing and styling-->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!--For YouTube, GitHub, LinkedIn logos-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--Styling in general-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <title>Andrés Casillas García de Presno</title>
+    <!--for GitHub, Youtube and LinkedIn logos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html { font-size: 16px; }
+    body { font-family: monospace; color:  yellow; }
+
+    h1 { font-size: 2rem; }    /*means twice the html font-size*/
+    h2 { font-size: 1.50rem; } 
+    p  { font-size: 1rem; }    
+
+    @media (max-width: 600px) {
+      html { font-size: 14px; } /* smaller on phones */
+    }
+  </style>
 </head>
-<body>
+<body style="background-color: black;">
 
-
-<!-- Navigation -->
-	<nav class="navbar navbar-expand-sm navbar-dark text-success" role="navigation" >
-	  <div class="container w3-bar w3-pink w3-large">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-    
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li><a href="index.html" class="w3-button w3-black">Home</a></li>
-            <li><a href="./AcademicCV(Fraunhofer).pdf" class="w3-button w3-black">CV</a></li>
-            <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
-            <li><a href="books.html" class="w3-button w3-black">Books</a></li> 
-            <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
-            <li><a href="miscellanueos.html" class="w3-button w3-black">Miscellaneous</a></li> 
-        </ul>
-      </div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container" style="font-family: serif; font-size: large;">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-xs-8" style="height: 100vh;">
-                
                 <!-- Main Image -->
                 
                 <div class = "smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
                     <br>
                     <center><img class="img-responsive" src="./InstagramPosts/pi , e/1.png" 
-                        style="max-width:75%; text-align:justify"></center>
+                        style="max-width:50%; text-align:justify"></center>
                     </p>
                     <br>
-                    <br>
-                    <br>  
-                    <p>Last update: 01.11.2024</p>
+
                 </div>
             </div> 
-
-            <!-- Stuff on the Sidebar -->
-            <div class="col-xs-4">
-    
-           </div>
+            <h1>Menu</h1>
+    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+        
+        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+        
+        <li><a href="index_copy.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+        
+    </ul>
 
             
             
             
         </div>
-
-
-    </div>
-    <!-- /.container -->
 </body>
 
 </html>

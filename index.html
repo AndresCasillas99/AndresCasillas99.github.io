@@ -1,126 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-  <title>Andrés Casillas García de Presno</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--NavBar sizing and styling-->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!--For YouTube, GitHub, LinkedIn logos-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--Styling in general-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Set the last update date
-      var lastUpdateSpan = document.getElementById("last-update");
-      var currentDate = new Date();
-      var formattedDate = ("0" + currentDate.getDate()).slice(-2) + "."
-                        + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "."
-                        + currentDate.getFullYear();
-      lastUpdateSpan.textContent = formattedDate;
-    });
-  </script>
+    <title>Andrés Casillas García de Presno</title>
+    <!--for GitHub, Youtube and LinkedIn logos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html { font-size: 16px; }
+    body { font-family: monospace; color:  yellow; }
+
+
+    a { color: yellow; } /* yellow hyperlinks */
+    a:visited { color: #e6c200; }
+    a:hover, a:focus { color: #fff066; text-decoration: underline; }
+
+    h1 { font-size: 2rem; }    /*means twice the html font-size*/
+    h2 { font-size: 1.25rem; } 
+    p  { font-size: 1rem; }    
+
+    @media (max-width: 600px) {
+      html { font-size: 14px; } /* smaller on phones */
+    }
+  </style>
 </head>
-<body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-sm navbar-dark text-success icon" role="navigation">
-  <div class="container w3-bar w3-pink w3-large">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html" class="w3-button w3-black">Home</a></li>
-        <li><a href="./AcademicCV(Fraunhofer).pdf" class="w3-button w3-black">CV</a></li>
-        <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
-        <li><a href="books.html" class="w3-button w3-black">Books</a></li>
-        <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
-        <li><a href="miscellanueos.html" class="w3-button w3-black">Miscellaneous</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Page Content -->
-<div class="container" style="font-family: serif; font-size: large;">
-  <div class="row">
-    <!-- Entries Column -->
-    <div class="col-xs-8" style="max-width:100%;height:auto;">
-      <!-- Main Image -->
-      <div class="smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
+<body style="background: #000000;"></body>
+    <div style="color: #ffffff; ">
+        <h1>Andrés Casillas García de Presno</h1>
+        <img class="img-responsive" src="./FotoGitHub.jpeg" style="width:10%;height:auto;" height="50"><br>
         <br>
-        <p style="color: crimson;">(If you can't see the navigation menu, click in the upper right corner of the pink stripe to display it)</p>
-        <br>
-        <p>I'm a mexican mathematician currently doing a master’s in mathematics at <a href="https://www.uni-bonn.de/en">Bonn University</a><br> and a student research assistant at <a href="https://www.scai.fraunhofer.de/">Fraunhofer Institute for Algorithms and Scientific Computing.</a></p>
-        <p>I'm writting my master's thesis on <a href="https://archive.ins.uni-bonn.de/wissrech.ins.uni-bonn.de/research/projects/amg/index.html">Parallel Algebraic Multigrid Methods (AMG)</a> under the supervision of <a href="https://ins.uni-bonn.de/staff/schweitzer">Prof. Dr. Marc Alexander Schweitzer</a> at <a href="https://ins.uni-bonn.de/">Bonn's Institute fur Numerical Simulation.</a></p>
-        <p>Previously I was a scholar at <a href="https://www.matem.unam.mx/">IMATE, UNAM </a> (Institute of Mathematics of the National Autonomous University of Mexico) and a bachelor's student in mathematics at UNAM´s <a href="https://www.fciencias.unam.mx/">Faculty of Science</a> in Mexico City, Mexico.</a></p>
-        <p>I wrote <a href="http://132.248.9.195/ptd2023/mayo/0839235/Index.html">my bachelor´s thesis</a> on a very interesting connection between <a href="https://mathworld.wolfram.com/CellularAutomaton.html">cellular automata</a> and number theory, for which I was granted the <a href="https://www.smm.org.mx/premio-sotero-prieto">«Sotero Prieto 2024» medal</a> by the Mexican Mathematical Society for the best undergraduate thesis in mathematics in Mexico.</p>
-        <p>My main interests lie in computability theory, numerics (numerical lineal algebra, numerical analysis, numerical number theory), and dynamical systems.</p>
-        <br>
-        <br>
-        A map of the best "taquerías" in Mexico City:
-        <br>
-        <br>
-        <!-- Google Map Embed -->
-        <iframe
-        width="100%"
-        height="450"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/d/u/0/embed?mid=1L90r_5nfeq6DIjPmFn7RuokIDcO43K4&ehbc=2E312F" allowfullscreen>
-        </iframe>
-        <!--
-        <div class="row">
-          <div class="column">
-            <center><img class="img-responsive" src="./CellularAutomata1.png" alt="A very nice dynamic cellular automata" style="width:50%; text-align:justify"></center> A very nice dynamic cellular automata with neighborhood N_t = (-t,0,t)
-          </div>
+        <h2 style="margin: 20px 0 10px 0; letter-spacing: 2px; font-weight: 700;">
+          👋 Welcome, visitor!
+        </h2>
+        <div style="margin: 30px 0;">
+          <a href="https://www.hitwebcounter.com" target="_blank">
+            <img src="https://hitwebcounter.com/counter/counter.php?page=21259689&style=0050&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a> 
+          <div style="font-size:small;">Visitor Counter</div>
         </div>
-        -->
+        <p>I'm a mexican mathematician currently doing a master’s in mathematics at <a href="https://www.uni-bonn.de/en" style="color: yellow;">Bonn University</a> and a student research assistant at <a href="https://www.scai.fraunhofer.de/" style="color: yellow;">Fraunhofer Institute for Algorithms and Scientific Computing.</a></p>
+        <p>I'm writting my master's thesis on machine learning algorithmic optimization </a> under the supervision of <a href="https://ins.uni-bonn.de/staff/schweitzer" style="color: yellow;">Prof. Dr. Marc Alexander Schweitzer</a> at <a href="https://ins.uni-bonn.de/" style="color: yellow;">Bonn's Institute fur Numerical Simulation.</a></p>
+        <p>My main interests lie in data science (particularly applied to sports), machine learning, and everything that has to do with using algorithms smartly (most of the time with lots of heavy math behind them).</p>
         <br>
-        <br>
-        <br>
-        <p>Last update: 13.04.2025</p>
-      </div>
-    </div>
+        <!--how to forget the marquee 💚 -->
+        <marquee style="color: yellow;">Woo, its moving :O :D</marquee> 
 
-    <!-- Contact Info on the Sidebar -->
-    <div class="col-xs-4">
-      <div style="max-width:100%;height:auto;font-family: 'Oswald', sans-serif; font-size: 42px;"><b>Andrés Casillas García de Presno</b></div><br>
-      <img class="img-responsive" src="./FotoGitHub.jpeg" style="max-width:75%;height:auto;" height="250"><br>
-      <p><b>a.casillasgdp@gmail.com</b><br>
-      <p>a dot (first last name) gdp at gmail</p>
-      <a href="https://www.uni-bonn.de/en">Universität Bonn</a><br>
-      Endenicher Allee 60<br>
-      53115 Bonn <br>
-      Germany<br>
-      </p>
-    </div>
-
-    <!-- Links on the Sidebar -->
-    <div class="col-xs-4">
-      <dd><i class="fa fa-youtube-play" style="font-size:48px;color:red"></i> <a href="https://www.youtube.com/@ElIrracional">YouTube</a></dd>
-      <dd><i class="fa fa-github" style="font-size:48px;color:black"></i><a href="https://github.com/AndresCasillas99">GitHub</a></dd>
-      <dd><i class="fa fa-linkedin-square" style="font-size:48px;color:rgb(0, 119, 181)"></i><a href="https://www.linkedin.com/in/andr%C3%A9s-casillas-garc%C3%ADa-de-presno-094b03329/">LinkedIn</a></dd>
-      <!-- Google Map Embed
-      <iframe
-      width="100%"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d40405.24586374944!2d7.062766887514595!3d50.732407587856116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bee13f238b51df%3A0x6c4dac808d99b4cf!2sMathematik%20Zentrum%20der%20Universit%C3%A4t%20Bonn!5e0!3m2!1sen!2sde!4v1739287686780!5m2!1sen!2sde" allowfullscreen>
-    </iframe>
-    -->
-    </div>
-  </div>
-</div>
-<!-- /.container -->
+    <h1>Menu</h1>
+    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+        
+        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+        
+        <li><a href="index_copy.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+        
+    </ul>
 </body>
 </html>

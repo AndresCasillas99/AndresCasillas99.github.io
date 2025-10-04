@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Andrés Casillas García de Presno</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--NavBar sizing and styling-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--For YouTube, GitHub, LinkedIn logos-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Styling in general-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Set the last update date
+      var lastUpdateSpan = document.getElementById("last-update");
+      var currentDate = new Date();
+      var formattedDate = ("0" + currentDate.getDate()).slice(-2) + "."
+                        + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "."
+                        + currentDate.getFullYear();
+      lastUpdateSpan.textContent = formattedDate;
+    });
+  </script>
+  <style>
+  .project-list li {
+    margin-bottom: 32px;
+  }
+  </style>
+</head>
+<body style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22><text x=%220%22 y=%2232%22 font-size=%2232%22 opacity=%220.2%22>⚽️</text></svg>'); background-repeat: repeat; background-size: 48px 48px; background-color: #fff;">
+
+
+
+<!-- Navigation -->
+	<nav class="navbar navbar-expand-sm navbar-dark text-success" role="navigation" >
+	  <div class="container w3-bar w3-pink w3-large">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+    
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html" class="w3-button w3-black">Home</a></li>
+            <li><a href="./NewCV.pdf" class="w3-button w3-black">CV</a></li>
+            <li><a href="projects.html" class="w3-button w3-black">Projects</a></li>
+            <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
+            <li><a href="books.html" class="w3-button w3-black">Books</a></li> 
+            <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
+            <li><a href="miscellanueos.html" class="w3-button w3-black">Miscellaneous</a></li> 
+        </ul>
+      </div>
+	  </div>
+	</nav>
+  
+  <!-- Page Content -->
+ 
+<!-- Page Content -->
+<div class="container" style="font-family: serif; font-size: large;">
+  <div class="row">
+    <div class="col-xs-12" style="min-height: 100vh;">
+      <div class="smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
+        <h1 style="
+        text-align:center;
+        font-family: 'Georgia', 'Times New Roman', Times, serif;
+        font-size: 2.2em;
+        color: #000000;
+        background: linear-gradient(to right, #ffff00 10%, #ff6600 40%, #ff0000 90%);
+        border: 4px double #ff0000;
+        padding: 18px 0 12px 0;
+        margin-bottom: 24px;
+        text-shadow: 1px 1px 0 #ffff00, 2px 2px 0 #ff0000, 3px 3px 0 #000;
+        letter-spacing: 1.5px;
+        overflow: hidden;
+        position: relative;
+      ">
+        <span style="
+          display: inline-block;
+          white-space: nowrap;
+          animation: scroll-title 12s linear infinite;
+          font-size: 1.1em;
+          ">
+          &#128293;&#128293;&#128293; (some of) My Projects &nbsp; (some of) My Projects &nbsp; (some of) My Projects &#128293;&#128293;&#128293;
+        </span>
+        <style>
+          @keyframes scroll-title {
+            0% { transform: translateX(0);}
+            100% { transform: translateX(-100%);}
+          }
+        </style>
+      </h1>
+      <div style="
+        display: inline-block;
+        background: linear-gradient(90deg, #fffbe6 0%, #e3e6ff 100%);
+        border: 3px solid #002f6c;
+        border-radius: 14px;
+        box-shadow: 0 0 16px #002f6c22, 0 0 4px #ffc62755;
+        padding: 14px 28px;
+        margin: 24px auto 0 auto;
+        font-family: 'Georgia', 'Times New Roman', Times, serif;
+        font-size: 1.3em;
+        color: #002f6c;
+        text-shadow: 0 1px 0 #fff, 0 0 2px #ffc627;
+        letter-spacing: 1px;
+        text-align: center;
+      ">
+        <br
+        <p>In the last few years I've coded quite a lot (enjoyed it a lot as well!), and some of my coding time has transformed into actual projects. 
+            Most of them can be found in my <a href="https://github.com/AndresCasillas99" target="_blank">GitHub </a> account. Nonetheless, here I will list some of the most interesting ones, with a brief description and some useful links.
+            Hope you enjoy!!!
+        </p>
+        </p>
+        <br>
+        <div class="project-title">Some of my favorite projects:</div>
+        <ul class="project-list">
+          <li>
+            <span class="project-title">
+              <a href="https://learngermanwithandres.streamlit.app/" target="_blank" class="project-link">German Learning App</a>
+              <b> [2025](Python, Streamlit)</b>
+            </span>
+            <div class="project-desc">
+              I built a Streamlit app to learn German, featuring vocabulary, grammar, and exercises. It includes a vocabulary trainer and a grammar section with explanations and examples.
+            </div>
+          </li>
+          <li>
+            <span class="project-title">
+              <a href="https://github.com/AndresCasillas99/LovaszThetaNumber" target="_blank" class="project-link">Lovasz Theta Number Calculator</a>
+                <b> [2025](Julia, Jupyter)</b>
+            </span>
+            <div class="project-desc">
+              The Lovász Theta number of an undirected graph can be found by solving an eigenvalue problem.
+              An interesting property of it is given by Lovász's Sandwich Theorem, which links the clique number and the chromatic number of a graph and its compliment graph.
+              For perfect graphs, it is enough to find the Lovász Theta number with accuracy of less than one half to know the chromatic number and maximum independent size of a graph. This allows for efficient polynomial time algorithms for finding maximum independent sets and optimal colorings.
+              It also behaves well with the graph strong product, and gives an upper bound for the Shannon Capacity of a graph.
+
+              In a nutshell, it's worth cumputing *wink emoji* (found it ---> 😉).
+              <br>
+            </div>
+          </li>
+          <li>
+            <span class="project-title">
+              <a href="https://github.com/AndresCasillas99/GameOfLife-Processing-" target="_blank" class="project-link">Conway's Game of Life (Processing)</a>
+              <b> [2024](Processing)</b>
+            </span>
+            <div class="project-desc">
+              Just for fun, I recreated Conway’s famous cellular automaton in Processing to watch simple rules create surprisingly complex patterns.
+              Processing is great for cellular automata visualizations.
+            </div>
+          </li>
+          <li>
+            <span class="project-title">
+              <a href="https://github.com/AndresCasillas99/Langton-s-Ant" target="_blank" class="project-link">Langton's Ant (Processing)</a>
+               <b> [2024](Processing)</b>
+            </span>
+            <div class="project-desc">
+               I did this little simulation of Langton’s Ant to see how a tiny rule can create order and chaos from an empty grid. Several interesting open questions (which I have not diven into yet) arise from this simple automaton.
+            </div>
+          </li>
+          <li>
+            <span class="project-title">
+              <a href="https://github.com/AndresCasillas99/Rule30" target="_blank" class="project-link">Rule30</a>
+               <b> [2024](Julia, Jupyter)</b>
+            </span>
+            <div class="project-desc">
+              An efficient algorithm for computing the n-th row of Wolfram's Rule 30. It uses an indexing approach as the one in CSR sparse matrix storage.
+            </div>
+          </li>
+          <li>
+            <span class="project-title">
+              <a href="https://github.com/AndresCasillas99/Rule30-Pseudo-Random-Number-Generator" target="_blank" class="project-link">Rule30-Pseudo-Random-Number-Generator</a>
+              <b> [2024](Julia, Jupyter)</b>
+            </span>
+            <div class="project-desc">
+              A (pseudo)random number generator using the central column values of Wolfram's Rule 30. I once heard Wolfram uses the same method in the pseudo-random number generator of Mathematica (is this true?).
+            </div>
+          </li>
+          <li>
+            <span class="project-title">
+              <a href="https://github.com/AndresCasillas99/PoissonProblemGalerkinMethod" target="_blank" class="project-link">PoissonProblemGalerkinMethod</a>
+              <b> [2024](Python, Jupyter)</b>
+            </span>
+            <div class="project-desc">
+              Approximates the solution of the weak form of the Poisson problem in the unit square with zero boundary values using the Galerkin method. Includes plots to visualize approximate solutions.
+              This is kind of a dummy project of the real deal, which I coded Fortran 💀. 
+            </div>
+          </li>
+          <li>
+            <span class="project-title">
+              <a href="https://github.com/AndresCasillas99/BuffonsNeedle" target="_blank" class="project-link">BuffonsNeedle</a>
+            </span>
+            <div class="project-desc">
+              For fun, I coded Buffon’s Needle experiment to estimate 𝜋. It was one of the first programs in which I got to play around with structs and somewhat more "serious" programming. 
+            </div>
+          </li>
+        </ul>
+        <br>
+      </div>
+        <div style="
+        display: inline-block;
+        background: linear-gradient(90deg, #ff00cc 0%, #00ffff 100%);
+        border: 4px double #fff700;
+        border-radius: 16px;
+        box-shadow: 0 0 24px #00ffff99, 0 0 8px #ff00cc99;
+        padding: 10px 28px;
+        margin: 24px auto 0 auto;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
+        font-size: 1.3em;
+        color: #fff700;
+        text-shadow: 2px 2px 8px #ff00cc, 2px 2px 0 #000, 0 0 8px #00ffff;
+        letter-spacing: 2px;
+        text-align: center;
+      ">
+        <span style="font-size:1.2em;">🕹️ Last update: <b>29.07.2025</b> 🕹️</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- /.container -->
+</body>
+
+</html>

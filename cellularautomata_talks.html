@@ -1,148 +1,66 @@
-<!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
-<html lang="en">
+<html>
 <head>
-  <title>Andrés Casillas García de Presno</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--NavBar sizing and styling-->
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <!--For YouTube, GitHub, LinkedIn logos-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--Styling in general-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Set the last update date
-      var lastUpdateSpan = document.getElementById("last-update");
-      var currentDate = new Date();
-      var formattedDate = ("0" + currentDate.getDate()).slice(-2) + "."
-                        + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "."
-                        + currentDate.getFullYear();
-      lastUpdateSpan.textContent = formattedDate;
-    });
-  </script>
+    <title>Andrés Casillas García de Presno</title>
+    <!--for GitHub, Youtube and LinkedIn logos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html { font-size: 16px; }
+    body { font-family: monospace; color:  yellow; }
+
+    a { color: yellow; } /* yellow hyperlinks */
+    a:visited { color: #e6c200; }
+    a:hover, a:focus { color: #fff066; text-decoration: underline; }
+
+    h1 { font-size: 2rem; }    /*means twice the html font-size*/
+    h2 { font-size: 1.25rem; } 
+    p  { font-size: 1rem; }    
+
+    @media (max-width: 600px) {
+      html { font-size: 14px; } /* smaller on phones */
+    }
+  </style>
 </head>
-<body>
-
-
-<!-- Navigation -->
-	<nav class="navbar navbar-expand-sm navbar-dark text-success" role="navigation" >
-	  <div class="container w3-bar w3-pink w3-large">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-    
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-            <li><a href="index.html" class="w3-button w3-black">Home</a></li>
-            <li><a href="./NewCV.pdf" class="w3-button w3-black">CV</a></li>
-            <li><a href="projects.html" class="w3-button w3-black">Projects</a></li>
-            <li><a href="cellularautomata.html" class="w3-button w3-black">Cellular Automata</a></li>
-            <li><a href="books.html" class="w3-button w3-black">Books</a></li> 
-            <li><a href="mexico.html" class="w3-button w3-black">México</a></li>
-            <li><a href="miscellanueos.html" class="w3-button w3-black">Miscellaneous</a></li> 
-        </ul>
-      </div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container" style="font-family: serif; font-size: large;">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-xs-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <div style="
-                  display: inline-block;
-                  background: linear-gradient(90deg, #fffbe6 0%, #e3e6ff 100%);
-                  border: 3px solid #002f6c;
-                  border-radius: 14px;
-                  box-shadow: 0 0 16px #002f6c22, 0 0 4px #ffc62755;
-                  padding: 14px 28px;
-                  margin: 24px auto 0 auto;
-                  font-family: 'Georgia', 'Times New Roman', Times, serif;
-                  font-size: 1.3em;
-                  color: #002f6c;
-                  text-shadow: 0 1px 0 #fff, 0 0 2px #ffc627;
-                  letter-spacing: 1px;
-                  text-align: center;
-                ">
+<body style="background-color: black;"></body>
                 <div class = "smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
                   <br>
                   <ul>
                     <li><a href="https://www.youtube.com/watch?v=i-Cv4kJmafY">29.03.2025 - "Autómatas celulares: álgebra, algoritmos y algo más", Universidad de Guadalajara.</a></li>
                     <li><a href="https://www.youtube.com/watch?v=brgHvF8URUQ">24.03.2023 - "Consideraciones algorítmicas en autómatas celulares", Instituto de Matemáticas, Universidad Nacional Autónoma de México (UNAM).</a></li>
                     <li><a href="https://www.youtube.com/watch?v=2yMDjspeVVU">14.10.2022 - "De cuando Pascal conoció a Turing y a Wolfram", Instituto de Matemáticas, Universidad Nacional Autónoma de México (UNAM).</a></li>
-                    <br>
-                    <li><a href="https://www.youtube.com/watch?v=D6HBza44ITA">24.06.2023 - A small interview at UNAM.</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=D6HBza44ITA">24.06.2023 - An interview at UNAM.</a></li>
                     
                   </ul>
                     <br>
                   </div>
-                    <div style="
-                    display: inline-block;
-                    background: linear-gradient(90deg, #ff00cc 0%, #00ffff 100%);
-                    border: 4px double #fff700;
-                    border-radius: 16px;
-                    box-shadow: 0 0 24px #00ffff99, 0 0 8px #ff00cc99;
-                    padding: 10px 28px;
-                    margin: 24px auto 0 auto;
-                    font-family: 'Comic Sans MS', 'Comic Sans', cursive, Arial, sans-serif;
-                    font-size: 1.3em;
-                    color: #fff700;
-                    text-shadow: 2px 2px 8px #ff00cc, 2px 2px 0 #000, 0 0 8px #00ffff;
-                    letter-spacing: 2px;
-                    text-align: center;
-                  ">
-                    <span style="font-size:1.2em;">🕹️ Last update: <b>29.07.2025</b> 🕹️</span>
-                  </div>
-                </div>
-            </div> 
+                    
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start;text-align:center;padding:12px 0;">
+            <figure style="margin:0;">
+              <img class="img-responsive" src="./Rule30.png" alt="Wolfram's Rule 30" 
+              style="max-width:50%; text-align:justify"><figcaption> The beautiful and intriguing <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></figcaption>
+              <br>
+            </figure>
 
-            <!-- Stuff on the Sidebar -->
-            <div class="col-xs-4">
-              <div style="
-                  display: inline-block;
-                  background: linear-gradient(90deg, #fffbe6 0%, #e3e6ff 100%);
-                  border: 3px solid #002f6c;
-                  border-radius: 14px;
-                  box-shadow: 0 0 16px #002f6c22, 0 0 4px #ffc62755;
-                  padding: 14px 28px;
-                  margin: 24px auto 0 auto;
-                  font-family: 'Georgia', 'Times New Roman', Times, serif;
-                  font-size: 1.3em;
-                  color: #002f6c;
-                  text-shadow: 0 1px 0 #fff, 0 0 2px #ffc627;
-                  letter-spacing: 1px;
-                  text-align: center;
-                ">
-              <center><img class="img-responsive" src="./Rule30.png" alt="Wolfram's Rule 30" 
-                style="max-width:100%; text-align:justify"> The beautiful and intriguing <a href="https://mathworld.wolfram.com/Rule30.html">Rule 30</a></center>
-                <br>
-              <center><img class="img-responsive" src="./NumerosPentagonales.png" alt="Euler's pentagonal number theorem encoded in a cellular automata" 
-                style="max-width:100%; text-align:justify"> This automata encodes <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">Euler's pentagonal number theorem</a>: different colors represent the values 1,0, or -1.</center>
-              </p>
-              </div>
+            <figure style="margin:0;">
+              <img class="img-responsive" src="./NumerosPentagonales.png" alt="Euler's pentagonal number theorem encoded in a cellular automata" 
+              style="max-width:50%; text-align:justify"><figcaption>This automata encodes <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">Euler's pentagonal number theorem</a>: different colors represent the values 1,0, or -1.</figcaption>
+            </figure>
           </div>
 
-            
+                <h1>Menu</h1>
+    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+        
+        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+        
+        <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+        
+    </ul>
             
             
         </div>

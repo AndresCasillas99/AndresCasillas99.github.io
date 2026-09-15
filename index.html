@@ -23,7 +23,74 @@
   </style>
 </head>
 <body style="background: #000000;">
-    <div style="color: #ffffff; ">
+    <style>
+      .content-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .section-header {
+        color: #888;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 32px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 6px;
+      }
+      .section-header:first-of-type {
+        margin-top: 8px;
+      }
+      .info-row {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 16px;
+        align-items: baseline;
+        border-left: 3px solid #444;
+        padding-left: 12px;
+      }
+      .info-label {
+        color: yellow;
+        font-size: 0.85em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        min-width: 160px;
+        flex-shrink: 0;
+      }
+      .info-value {
+        color: #fff;
+        text-align: center;
+      }
+
+      .menu-grid {
+        list-style: none;
+        padding: 8px 12px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      @media (max-width: 600px) {
+        .info-row {
+          flex-direction: column;
+          gap: 4px;
+          align-items: flex-start;
+        }
+        .info-label {
+          min-width: 0;
+        }
+        .menu-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 400px) {
+        .menu-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <div class="content-container" style="color: #ffffff;">
         <h1>Andrés Casillas García de Presno</h1>
         <img class="img-responsive" src="./FotoGitHub.jpeg" style="width:10%;height:auto;" height="50"><br>
         <br>
@@ -36,69 +103,68 @@
           <div style="font-size:small;">Visitor Counter</div>
         </div>
         <br>
-        <ul>
-          <li>
-            <strong style="color: yellow;">Current Venture:</strong>
-            <ul>
-              <li>Founder @ <a style="color: yellow;">IxMati</a> (under construction), a sports intelligence AI startup.</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">Current Role:</strong>
-            <ul>
-              <li>Machine Learning Scientist @ <a href="https://www.scai.fraunhofer.de/" style="color: yellow;">Fraunhofer Institute for Algorithms and Scientific Computing</a>.</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">PhD:</strong>
-            <ul>
-              <li>Mathemtics PhD candidate @ <a href="https://www.uni-bonn.de/de" style="color: yellow;">Bonn University</a> (Germany).</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">Master's Education:</strong>
-            <ul>
-              <li><a href="./MasterDegreeDiplomaBonn.pdf">M.Sc. in Mathematics</a> with a minor in Computer Science from <a href="https://www.uni-bonn.de/de" style="color: yellow;">Bonn University</a> (Germany).</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">Master's Thesis:</strong>
-            <ul>
-              <li>Worked on machine learning algorithmic optimization (available <a href="./CasillasMasterThesis.pdf">here</a>). Defended with highest distinction.</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">Awards (Master's):</strong>
-            <ul>
-              <li><a href="https://www.nafems.org/students/student-awards/dach/winners/?srsltid=AfmBOoqfmNS6yxXxeD19FS8DZ6I18gPJto7NOCN_U6TO-jx7wZDkGfOV" style="color: yellow;">NAFEMS DACH Student Award 2024/2025</a> second place for the best thesis in Artificial Intelligence methods for Simulation in Germany, Switzerland and Austria.</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">Bachelor's Education:</strong>
-            <ul>
-              <li><a href="./TítuloUNAM.pdf">B.Sc. in Mathematics</a> (with honors) at <a href="https://www.unam.mx/" style="color: yellow;">UNAM</a> (Mexico).</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">Awards (Bachelor's):</strong>
-            <ul>
-              <li><a href="./PremioSoteroPrieto2024.jpg" style="color: yellow;">"Sotero Prieto 2024" medal</a> awarded by the <a href="https://www.smm.org.mx/">Mexican Mathematical Society</a> for the best mathematics thesis in Mexico.</li>
-              <li><a href="./GabinoBarredaDiplomaDeAprovechamiento.pdf" style="color: yellow;">"Gabino Barreda" diploma</a> for achieving the second-highest GPA at UNAM.</li>
-            </ul>
-          </li>
-          <li>
-            <strong style="color: yellow;">Core Interests:</strong>
-            <ul>
-              <li>Machine Learning, computer vision, sports intelligence, quantitative finance, combinatorics, spectral graph theory, number theory.</li>
-            </ul>
-          </li>
-        </ul>
-        
+
+        <h3 class="section-header">Professional</h3>
+
+        <div class="info-row">
+          <span class="info-label">💼 Current Venture</span>
+          <span class="info-value">Founder @ <a style="color: yellow;">IxMati</a> (under construction), a sports intelligence AI startup.</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">💼 Current Role</span>
+          <span class="info-value">Machine Learning Scientist @ <a href="https://www.scai.fraunhofer.de/" style="color: yellow;">Fraunhofer Institute for Algorithms and Scientific Computing</a>.</span>
+        </div>
+
+        <h3 class="section-header">Education</h3>
+
+        <div class="info-row">
+          <span class="info-label">🎓 PhD</span>
+          <span class="info-value">Mathemtics PhD candidate @ <a href="https://www.uni-bonn.de/de" style="color: yellow;">Bonn University</a> (Germany).</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">🎓 Master's Education</span>
+          <span class="info-value"><a href="./MasterDegreeDiplomaBonn.pdf">M.Sc. in Mathematics</a> with a minor in Computer Science from <a href="https://www.uni-bonn.de/de" style="color: yellow;">Bonn University</a> (Germany).</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">🎓 Master's Thesis</span>
+          <span class="info-value">Worked on machine learning algorithmic optimization (available <a href="./CasillasMasterThesis.pdf">here</a>). Defended with highest distinction.</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">🎓 Bachelor's Education</span>
+          <span class="info-value"><a href="./TítuloUNAM.pdf">B.Sc. in Mathematics</a> (with honors) at <a href="https://www.unam.mx/" style="color: yellow;">UNAM</a> (Mexico).</span>
+        </div>
+
+        <h3 class="section-header">Recognition</h3>
+
+        <div class="info-row">
+          <span class="info-label">🏆 Awards (Master's)</span>
+          <span class="info-value"><a href="https://www.nafems.org/students/student-awards/dach/winners/?srsltid=AfmBOoqfmNS6yxXxeD19FS8DZ6I18gPJto7NOCN_U6TO-jx7wZDkGfOV" style="color: yellow;">NAFEMS DACH Student Award 2024/2025</a> second place for the best thesis in Artificial Intelligence methods for Simulation in Germany, Switzerland and Austria.</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">🏆 Awards (Bachelor's)</span>
+          <span class="info-value">
+            <a href="./PremioSoteroPrieto2024.jpg" style="color: yellow;">"Sotero Prieto 2024" medal</a> awarded by the <a href="https://www.smm.org.mx/">Mexican Mathematical Society</a> for the best mathematics thesis in Mexico.<br>
+            <a href="./GabinoBarredaDiplomaDeAprovechamiento.pdf" style="color: yellow;">"Gabino Barreda" diploma</a> for achieving the second-highest GPA at UNAM.
+          </span>
+        </div>
+
+        <h3 class="section-header">Interests</h3>
+
+        <div class="info-row">
+          <span class="info-label">🔬 Core Interests</span>
+          <span class="info-value">Machine Learning, computer vision, sports intelligence, quantitative finance, combinatorics, spectral graph theory, number theory.</span>
+        </div>
+
         <!--how to forget the marquee 💚 -->
         <marquee style="color: yellow;">Woo, its moving :O :D</marquee> 
 
     <h1>Menu</h1>
-    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+    <ul class="menu-grid">
         <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
         <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
         <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>

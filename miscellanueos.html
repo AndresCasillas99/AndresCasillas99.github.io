@@ -1,512 +1,426 @@
-
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Casillas García de Presno</title>
-    <!--for GitHub, Youtube and LinkedIn logos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     html { font-size: 16px; }
-    body { font-family: monospace; color:  yellow; }
-    
-    a { color: yellow; } /* yellow hyperlinks */
+    body { font-family: monospace; color: yellow; background: #000000; }
+    a { color: yellow; }
     a:visited { color: #e6c200; }
     a:hover, a:focus { color: #fff066; text-decoration: underline; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.25rem; }
+    h3 { font-size: 1.1rem; }
+    p  { font-size: 1rem; }
+    @media (max-width: 480px) { html { font-size: 16px; } }
 
-    h1 { font-size: 2rem; }    /*means twice the html font-size*/
-    h2 { font-size: 1.25rem; } 
-    p  { font-size: 1rem; }    
+    .content-container { max-width: 900px; margin: 0 auto; }
+    .info-row { display:flex; gap:12px; margin-bottom:16px; align-items:baseline; border-left:3px solid #444; padding-left:12px; }
+    .info-label { color: yellow; font-size:0.85em; text-transform:uppercase; letter-spacing:1px; min-width:160px; flex-shrink:0; }
+    .info-value { color:#fff; text-align:left; }
 
-    @media (max-width: 600px) {
-      html { font-size: 14px; } /* smaller on phones */
+    .collapsible-section { margin-top: 32px; }
+    .collapsible-section summary {
+      color: yellow; font-size:0.8em; text-transform:uppercase; letter-spacing:2px;
+      border-bottom:1px solid #333; padding-bottom:6px; cursor:pointer; list-style:none;
     }
-  </style>
+    .collapsible-section summary::-webkit-details-marker { display:none; }
+    .collapsible-section summary::before { content:"▶ "; display:inline-block; transition: transform 0.15s ease; }
+    .collapsible-section[open] summary::before { transform: rotate(90deg); }
+    .collapsible-section .info-row { margin-top:16px; }
+
+    .topic-list { list-style:none; padding:0; margin:0; }
+    .topic-list li { margin-bottom:8px; }
+    .topic-list li::before { content:"› "; color:#888; }
+
+    .course-list { list-style:none; padding-left:0; margin-top:16px; color:#fff; }
+    .course-list > li { margin-bottom:18px; border-left:3px solid #444; padding-left:12px; }
+    .course-name { font-weight:bold; }
+    .course-name.unam { color: rgb(0,247,255); }
+    .course-name.bonn { color: rgb(102,255,85); }
+    .course-list ul { margin-top:6px; padding-left:20px; }
+    .course-list .flag { color: red; }
+
+    .table-wrap { overflow-x:auto; margin: 16px 0; }
+    table { border-collapse: collapse; width: 100%; min-width: 480px; color:#fff; }
+    th, td { border:1px solid #555; padding:10px; }
+    th { text-align:center; color: yellow; }
+
+    .figure-block { text-align:center; margin-top:16px; }
+    .figure-block img { max-width:60%; height:auto; }
+    .figure-block figcaption { color:#fff; margin-top:6px; }
+
+    .menu-grid { list-style:none; padding:8px 12px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    @media (max-width: 480px) {
+      .info-row { flex-direction:column; gap:4px; align-items:flex-start; }
+      .info-label { min-width:0; }
+      .menu-grid { grid-template-columns:repeat(2,1fr); }
+      .figure-block img { max-width:90%; }
+    }
+    @media (max-width: 350px) { .menu-grid { grid-template-columns:1fr; } }
+    </style>
 </head>
+<body>
+    <div class="content-container" style="color:#ffffff;">
+        <h1 style="text-align:center;color:yellow;">Miscellaneous</h1>
+        <p style="text-align:center;">(I highly recommend Bad Bunny's <a href="https://www.youtube.com/playlist?list=OLAK5uy_kj-tmla329HlShco8Gc0_Raha_FFuTB3c" target="_blank">new album</a>.)</p>
 
-<body style="background: #000000;"></body>
-  <div style="color: #ffffff; ">
-    
-    <div class = "smoothed" style="margin-top:3%; text-align:justify; font-size: large;">
-      (I highly recommend Bad Bunny's <a href="https://www.youtube.com/playlist?list=OLAK5uy_kj-tmla329HlShco8Gc0_Raha_FFuTB3c">new album</a>.)
-    <br>
-    <h1 style="text-align: center;color: yellow;">Some cool pictures of proofs of nice math results</h1>
-    <br>
-    <p>
-    Some time ago I posted some fun and interesting math proofs (in spanish) on my Instagram profile which was linked to my YouTube channel. Nevertheless
-    I believe many non-spanish speakers will be able to follow them since they are mostly written with math symbols and just some spanish here and there to clarify things. 
-    For time reasons I stopped uploading them, but I've decided to upload the content here, so feel free to take a look:
-    </p>
-    <ul>
-        <li><a href="quicksort.html">On the Quicksort algorithm</a></li>
-        <li><a href="pie.html">pi+e and pi*e can't be both rational</a></li>
-        <li><a href="ulamspiral.html">Ulam's spiral</a></li>
-        <li><a href="donzagier.html">Don Zagier's proof of the infinity of primes</a></li>
-        <li><a href="modp.html">(x+y)^p = x^p + y^p (mod p)</a></li>
-        <li><a href="nor.html">Every logical proposition can be written only using the NOR operator</a></li>
-    </ul>
-    <!--
-    <p>Some solved exercises on Introduction to Functional Analysis (bachelor's level)</p>
-    <ul>
-      <li><a href="Andrés Casillas_am2_Tarea1_final.pdf"> Problem sheet 1</a></li>
-      <li><a href="Andrés Casillas García de Presno - am2_2022-1_Tarea 2.pdf"> Problem sheet 2</a></li>
-      <li><a href="am2_2022-1_Tarea 3.pdf"> Problem sheet 3</a></li>
-      <li><a href="Andrés Casillas García de Presno - am2_2022-1_Tarea 4.pdf"> Problem sheet 4</a></li>
-      <li><a href="Andrés Casillas García de Presno - am2_2022-1_Tarea 5.pdf"> Problem sheet 5</a></li>
-      <li><a href="Andrés Casillas García de Presno - am2_2022-1_Tarea 6.pdf"> Problem sheet 6</a></li>
-      <li><a href="Andrés Casillas García de Presno - am2_2022-1_Tarea 7.pdf"> Problem sheet 7</a></li>
-      <li><a href="Andrés Casillas García de Presno - am2_2022-1_Tarea 8.pdf"> Problem sheet 8</a></li>
-      <li><a href="Andrés Casillas García de Presno - am2_2022-1_Tarea 9.pdf"> Problem sheet 9</a></li>
-      <li><a href="am2_2022-1_Tarea 10.pdf"> Problem sheet 10</a></li>
-    </ul>
-    <br>
-    -->
-    <br>
-    <h1 style="color: yellow; text-align: center;">Courses that I've enjoyed</h1>
-      I wanted to keep a record of some of the courses that I've enjoyed the most during my time as a student. This space serves as a reminder of the topics I've enjoyed the most and the professors that have inspired me.
-      I've included some references and books that I used in several of these courses, hoping that it will be useful for someone else in the future. Please note that this list is neither exhaustive nor complete. 
-    <br>
-    <br> 
-    <ul>
-      <li style="color:rgb(0, 247, 255)">Number Theory I (UNAM, 2019)</li>
-      <ul>
-        <li>Lecturer: Prof. Julio César Guevara</li>
-        <li> Relevant refences include <a href="https://www.amazon.de/-/en/Introduction-Theory-Numbers-Ivan-Niven/dp/0471028517">"An Introduction to the Theory of Numbers"</a> by I. Niven and <a href="https://link.springer.com/book/10.1007/978-1-4612-0759-7">"The Book of Primer Number Records"</a> by Paulo Ribenboim.</li>
-      </ul>
-      <li style="color:rgb(0, 247, 255)">Linear Algebra I-II (UNAM, 2020)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Diana Avella Alaminos</li>
-        <li> Based on <a href="https://www.amazon.de/-/en/Introduction-Theory-Numbers-Ivan-Niven/dp/0471028517">"Linear Algebra Done Right"</a> by Axler and "Linear Alegbra" by Fridberg.</li>
-      </ul>
-      <li style="color:rgb(0, 247, 255)">Calculus I-IV (UNAM, 2019-2021)</li>
-      <ul>
-        <li>Lecturer: Prof. Javier Fernández García</li> has been the best professor I've ever had in my entire life.
-        <li> Any standard univariante and multivariate differential and integral calculus book will do (Piskunov, Apostol, Spivak, etc).</li>
-      </ul>
-      <li style="color:rgb(0, 247, 255)">Mathematical Analysis II: Functional Analysis (UNAM, 2022)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Mónica Alicia Clapp</li>
-        <li> The course was entirely based on her extraordinary book <a href="https://papirhos.matem.unam.mx/tul/P_T_02/index.html">"Análisis Matemático"</a></li>
-      </ul>
-      <li style="color:rgb(0, 247, 255)">Mathematical Logic I-III (UNAM, 2021-2022)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Carlos Torres Alcaraz</li> has been one of the funniest and most inspiring lecturers I've ever had.
-        <li> The course was entirely based on his extraordinary book <a href="https://www.amazon.com.mx/Hilbert-G%C3%B6del-dos-perspectivas-matem%C3%A1tica/dp/6073009194">"Hilbert y Gödel: dos perspectivas de la matemática"</a>
-        and another unpublished boo of his on Godel's incompleteness theorems (please let me know if it has been published already). We also relied on 
-        Smullyan's amazing book <a href="https://www.amazon.de/-/en/G%C3%B6dels-Incompleteness-Theorems-Oxford-Guides/dp/0195046722">"Gödel's Incompleteness Theorems".</a></li>
-      </ul>
-      <li style="color:rgb(0, 247, 255)">Computability Theory (UNAM, 2022)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Omar Antolín Camarena</li>. This was one of the lectures that heavily influenced my future direction of study.
-        <li> The course was entirely based the book <a href="https://www.amazon.de/Computability-Theory-Student-Mathematical-Library/dp/082187392X">"Computability Theory"</a> by Rebeca Weber.</li>
-      </ul>
-      <li style="color:rgb(0, 247, 255)">Gemeotry and Dynamical Systems (UNAM, 2022)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Renato Leriche Vázquez</li>. I learned to code in Julia for this course and totally fell in love with the language.
-        <li> Probably the best reference book I've used in any course: <a href="https://www.amazon.de/-/en/Indras-Pearls-Vision-Felix-Klein/dp/1107564743">"Indra's Pearls: The vision of Felix Klein"</a> by David Mumford.</li>
-      </ul>
-      <li style="color:rgb(102, 255, 85)">Combinatorial Optimization (Bonn, wintersemester 2023)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Stephan Held</li>
-        <li>Outline of topics: Matching in graphs, T-joins and b-matchings, Polyhedra for TSP, Matroids and Generalizations, Splitting Off Lemma and Connectivity in graphs, 
-          Subomdular flows, Graph Orientation, Directed Cuts, Survivable Network Design.</li>
-        <li> Mostly taken from the book <a href="https://www.or.uni-bonn.de/~vygen/co.html">"Combinatorial Optimization. Theory and Algorithms"</a> by Bernhard Korte Jens Vygen.</li>
-      </ul>
-      <li style="color:rgb(102, 255, 85)"> Scientific Computing I (Bonn, wintersemester 2023)</a></li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Jürgen Dölz</li>
-        <li>Outline of topics: PDE Theory, Finite Differences, Variational Formulations and Sobolev Spaces, The Galerkin Method, The Finite Element Method,
-          Error Analysis for Elliptic PDEs, Implementation and Adaptivity, Multigrid Methods, Parabolic PDEs. 
-        </li>
-        <li> As far as I know no specific book was followed, but a general reference is <a href="https://www.amazon.de/-/en/Finite-Elements-Applications-Mechanics-Elasticity/dp/0521705185">"Finite Elements"</a> by D. Braess.</li>
-      </ul>
-      <li style="color:rgb(102, 255, 85)"> Approximation Algorithms (Bonn, sommersemester 2024)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Vera Traub</li>
-        <li>Outline of topics: Bin packing, Set covering, Scheduling, MAX-SAT, TSP, Knapsack, LP Formulations, Randomized Algorithms, Steiner Trees, k-Steiner Trees, 
-          Prize-Collecting Steiner Forests, PTAS, FPTAS, Hardness of Approximation.  
-        <li> A great reference book is <a href="https://ics.uci.edu/~vazirani/book.pdf">"Approximation Algorithms"</a> by Vijay Vazirani (whom I had the enormous privilege of meeting in Bonn).</li> 
-      </ul>
-      <li style="color:rgb(102, 255, 85)"> Inverse Problems and Convex Optimization (Bonn, sommersemester 2024)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Alexander Effland and Prof. Dr.-Ing. Jan Hasenauer</li>
-        <li>Outline of topics: Convex Functions, Subdifferentials, Subgradient Methods, Proximal Operators, Convex Conjugates, Min-Max Theorems, 
-          Primal Dual methods, Optimal Transport, Identifiablity and Uncertainty Analysis, Quality of Fit, Frequentist Methods for Uncertainty Analysis, Bayesian Uncertainty Analysis,
-          Metropolis Hasthings Algorithm.    
-        <li>Reference: <a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">"Convex Optimization"</a> by Stephen Boyd and Lieven Vandenberghe.</li> 
-      </ul>
-      <li style="color:rgb(102, 255, 85)"> Seminar on Probabilistic Algorithms (Bonn, sommersemester 2024)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Thomas Kesselheim</li>
-        <li>I gave a talk on the paper <a href="https://arxiv.org/abs/2308.05067">"Controlling Tail Risk in Online Ski-Rental" </a> by Michael Dinitz, Sungjin Im, Thomas Lavastida, Benjamin Moseley, Sergei Vassilvitskii.</li>   
-      </ul>
-      <li style="color:rgb(102, 255, 85)"> Seminar on Uncertainty Quantification (Bonn, sommersemester 2024)</li>
-      <ul>
-        <li>Lecturer: Prof. Dr. Jürgen Dölz</li>
-        <li>I gave a talk on the paper <a href="https://www.researchgate.net/publication/222535147_Global_sensitivity_indices_for_nonlinear_mathematical_models_and_their_Monte_Carlo_estimates">"Global sensitivity indices for nonlinear mathematical models and their monte carlo
-          estimates" </a> by I.M. Sobol.</li>   
-      </ul>
-      <li style="color:rgb(102, 255, 85)">Continous Methods in Discrete Mathematics (Bonn, wintersemester 2024)</li>
-        <ul>
-          <li style="color: red;">This was an amazing lecture by Prof. Dr. Lazlo Vegh which I inmensely enjoyed (it was also his first lecture in Bonn).</li>
-          <li>Outline of topics: Semidefinite Programming and Graph Coloring, The Lovasz Theta Number, Shannon Capacity and Sums of Squares, 
-            The Multiplicative Weights Update Method, Solving Linear programs Approximately, Semidefinite Programming and Multicommodity Flows, Eletrical Flows, 
-            The Matrix Tree Theorem and Spectral Sparsification, Cheeger's Inequality, Solving Laplacian Systems. 
-          </li>
-        <li> <a href="https://people.orie.cornell.edu/dpw/orie6334/">These notes</a> by Dr. David Williamson give a good overview of the course.</li>
-      </ul>
-      <li style="color:rgb(102, 255, 85)">Modelling of Disease Dynamics (Bonn, wintersemester 2024)</li>
-        <ul>
-          <li>Lecturer: Dr. Martin Joachim Kühn</li>
-          <li>Outline of topics: Generation-based Models, Compartment Models, Steady States of ODE systems, Generalizations of the Reproduction Number, 
-            Integro-Differential equation-based Models, Stochastic Models, Agent-based Models.
-          </li>
-          <li> The course was mostly based on the book <a href="https://link.springer.com/book/10.1007/978-1-4939-9828-9">"Mathematical Models in Epidemiology"</a> by Carlos Castillo-Chávez and Zhilan Feng.</li>
-        </ul>
-      </ul>
-      <ul>
-        <li style="color:rgb(102, 255, 85)">Discrete Random Matrices (Bonn, wintersemester 2024)</li>
-          <ul>
-            <li style="color:red">Lecturer: Prof. Dr. Lisa Sauermann. She's one of the best lecturers I've had in my life!</li>
-            <li>Outline of topics: Given an nxn matrix with independent identically distributed random {-1,1}-valued entries, what is the probability
-              that the matrix is invertible?
-            </li>
-            <li> The course was a great an detailed exposition of the paper <a href="https://arxiv.org/abs/1812.09016">"Singularity of random Bernoulli matrices"</a> by Konstantin Tikhomirov.</li>
+        <details class="collapsible-section" open>
+          <summary>Cool pictures of math proofs</summary>
+          <div class="info-row">
+            <span class="info-label">✍️ Background</span>
+            <span class="info-value">
+              Some time ago I posted some fun and interesting math proofs (in Spanish) on my Instagram profile, which was linked to my YouTube channel. Nevertheless, I believe many non-Spanish speakers will be able to follow them since they are mostly written with math symbols, with just some Spanish here and there to clarify things. For time reasons I stopped uploading them, but I've decided to upload the content here, so feel free to take a look:
+            </span>
+          </div>
+          <ul class="topic-list" style="margin-left:12px; color:#fff;">
+            <li><a href="quicksort.html">On the Quicksort algorithm</a></li>
+            <li><a href="pie.html">π+e and π·e can't be both rational</a></li>
+            <li><a href="ulamspiral.html">Ulam's spiral</a></li>
+            <li><a href="donzagier.html">Don Zagier's proof of the infinity of primes</a></li>
+            <li><a href="modp.html">(x+y)^p = x^p + y^p (mod p)</a></li>
+            <li><a href="nor.html">Every logical proposition can be written only using the NOR operator</a></li>
           </ul>
-      </ul>
-    </ul>
-    
-    <br>
-    <h1 style="color: yellow; text-align: center;">Calisthenics</h1>
-I've formally practiced calisthenics since the beginning of 2022, but I've been practicing it informally since I was about 16 years old, so I decided
-it would be a nice idea to upload some of my favorite routines and my best times. My favorite type of training is <a href="https://www.healthline.com/health/emom"> EMOM (Every Minute on the Minute)</a>
-and I've been doing it more often especially since I moved to Germany where I don't have a proper coach or training group. 
+        </details>
 
-<br>
-I was very lucky to have attended <a href="https://www.fibo.com/">FIBO 2025</a> in Cologne where I met some of the best calisthenics athletes in the world. Here are the routines for male and female resistance qualification rounds:
+        <details class="collapsible-section">
+          <summary>Courses I've enjoyed</summary>
+          <div class="info-row">
+            <span class="info-label">🎓 Note</span>
+            <span class="info-value">
+              I wanted to keep a record of some of the courses that I've enjoyed the most during my time as a student. This space serves as a reminder of the topics I've enjoyed the most and the professors that have inspired me. I've included some references and books that I used in several of these courses, hoping that it will be useful for someone else in the future. Please note that this list is neither exhaustive nor complete.
+            </span>
+          </div>
 
-<h3 style="color: rgb(255, 79, 220); text-align: center;">Resistance Qualification Rounds</h3>
-<table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-  <thead>
-    <tr>
-      <th style="border: 1px solid black; padding: 10px; text-align: center;">Male</th>
-      <th style="border: 1px solid black; padding: 10px; text-align: center;">Female</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">
-        <strong>Round of 16:</strong><br>
-        - 30-second L Sit hold on dip bars (unbroken)<br>
-        - 30 dips<br>
-        - 30 pull ups<br>
-        - 30 push ups<br>
-        - 5 muscle ups<br>
-        - 20 squats with 20 kg vest<br>
-        - 20 dips<br>
-        - 20 pull ups<br>
-        - 20 push ups<br>
-        - 5 muscle ups<br>
-        - 20 squats with 20 kg vest<br>
-        - 30-second chin over the bar hold (unbroken)
-      </td>
-      <td style="border: 1px solid black; padding: 10px;">
-        <strong></strong><br>
-      </td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">
-        <strong>Quarter-finals:</strong><br>
-        - 10 pull ups | 10 muscle ups | 10 straight bar dips<br>
-        - 15 squats with 20 kg weight vest<br>
-        - 8 pull ups | 8 muscle ups | 8 straight bar dips<br>
-        - 15 squats with 20 kg weight vest<br>
-        - 6 pull ups | 6 muscle ups | 6 straight bar dips<br>
-        - 15 squats with 20 kg weight vest<br>
-        - 4 pull ups | 4 muscle ups | 4 straight bar dips<br>
-        - 15 squats with 20 kg weight vest<br>
-        - 2 pull ups | 2 muscle ups | 2 straight bar dips<br>
-      </td>
-      <td style="border: 1px solid black; padding: 10px;">
-        <strong>Quarter-finals:</strong><br>
-        - 5 muscle ups<br>
-        - 20 dips<br>
-        - 20 pull ups<br>
-        - 20 push ups<br>
-        - 20 squats with 10 kg weight vest<br>
-        - 10 dips<br>
-        - 10 pull ups<br>
-        - 10 push ups<br>
-        - 10 squats with 10 kg weight vest<br>
-        - 20-second chin over the bar hold (unbroken)
-      </td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">
-        <strong>Semi-finals:</strong><br>
-        - Bodyweight: 20 pull ups | 20 dips<br>
-        - With 10 kg: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
-        - With 10 kg: 20 pull ups | 20 dips<br>
-        - With 5 kg: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
-        - With 20 kg: 20 pull ups | 20 dips<br>
-        - Bodyweight: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
-        - 30 deadstop push ups<br>
-        - 30 squats with 20 kg weight vest<br>
-        - 5 muscle ups<br>
-      </td>
-      <td style="border: 1px solid black; padding: 10px;">
-        <strong>Semi-finals:</strong><br>
-        - Bodyweight: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
-        - 20 squats with 10 kg weight vest<br>
-        - 20 second L-sit hold on dip bars (unbroken)<br>
-        - Bodyweight: 3 muscle ups | 3 straight bar dips | 3 pull ups (unbroken)<br>
-        - 20 squats with 10 kg weight vest<br>
-        - 20 second L-sit hold on dip bars (unbroken)<br>
-        - Bodyweight: 1 muscle up | 1 straight bar dip | 1 pull up (unbroken)<br>
-      </td>
-    </tr>
-  </tbody>
-</table>
-            <h3 style="color: rgb(255, 79, 220); text-align: center;"> Leg Day </h3>
-            <table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Exercise</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">8 pistol squats (each leg)</td>
-                  <td style="border: 1px solid black; padding: 10px;">3 circuits (each per column)</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">20 explosive lunges</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">30 squats + jump</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">15 push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">10 diamond push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">4 sets + 1.5 min rest</td>
-                  <td style="border: 1px solid black; padding: 10px;">Under 15 mins</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <h3 style="color: rgb(255, 79, 220); text-align: center;"> Push Day </h3>
-            <table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Exercise</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">15 push ups (different types)</td>
-                  <td style="border: 1px solid black; padding: 10px;">EMOM</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">15 sec L-sit</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">10 diamond push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">20 dips</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">4 rounds + 2 min rest</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 mins exercise + 10 mins rest</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <h3 style="color: rgb(255, 79, 220); text-align: center;"> Pull Day </h3>
-            <table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Exercise</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">5 muscle ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">Everything without letting go of the bar</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">10 bar dips</td>
-                  <td style="border: 1px solid black; padding: 10px;">4 times</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">5 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">5 min break between sets</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <h3 style="color:  rgb(255, 79, 220); text-align: center;"> Bar Barian Requirements </h3>
-            <table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Exercise</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">5 muscle ups</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">45 dips</td>
-                  <td style="border: 1px solid black; padding: 10px;">Everything in under 6 minutes</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">25 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">55 push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">5 muscle ups</td>
-                  <td style="border: 1px solid black; padding: 10px;"></td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <h3 style="color:  rgb(255, 79, 220); text-align: center;"> Halloween Special (100 muscle ups)</h3>
-            <table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Exercise</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Details</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">2 muscle ups every minute</td>
-                  <td style="border: 1px solid black; padding: 10px;">50 minutes</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <h3 style="color: rgb(0, 247, 255); text-align: center;"> Two Fun Circuits </h3>
-            <h4>Circuit 1 (maximum 20 minutes)</h4>
-            <table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Push Ups</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Pull Ups</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Squats</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">30 push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">30 squats</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">25 push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">35 squats</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">20 push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">40 squats</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">15 push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">45 squats</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">10 push ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">50 squats</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <h4>Circuit 2 (maximum 15 minutes)</h4>
-            <table style="max-width: 100%; border: 1px solid black; border-collapse: collapse;">
-              <thead>
-                <tr>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Pull Ups</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Handstand (seconds)</th>
-                  <th style="border: 1px solid black; padding: 10px; text-align: center;">Push Ups</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">2 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 sec</td>
-                  <td style="border: 1px solid black; padding: 10px;">5 push ups</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">4 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">15 sec</td>
-                  <td style="border: 1px solid black; padding: 10px;">10 push ups</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">6 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">20 sec</td>
-                  <td style="border: 1px solid black; padding: 10px;">15 push ups</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">8 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">25 sec</td>
-                  <td style="border: 1px solid black; padding: 10px;">20 push ups</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid black; padding: 10px;">10 pull ups</td>
-                  <td style="border: 1px solid black; padding: 10px;">30 sec</td>
-                  <td style="border: 1px solid black; padding: 10px;">25 push ups</td>
-                </tr>
-              </tbody>
-            </table>
-            <br>  
-        </div>
-    </div> 
+          <ul class="course-list">
+            <li>
+              <span class="course-name unam">Number Theory I (UNAM, 2019)</span>
+              <ul>
+                <li>Lecturer: Prof. Julio César Guevara</li>
+                <li>Relevant references include <a href="https://www.amazon.de/-/en/Introduction-Theory-Numbers-Ivan-Niven/dp/0471028517" target="_blank">"An Introduction to the Theory of Numbers"</a> by I. Niven and <a href="https://link.springer.com/book/10.1007/978-1-4612-0759-7" target="_blank">"The Book of Prime Number Records"</a> by Paulo Ribenboim.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name unam">Linear Algebra I-II (UNAM, 2020)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Diana Avella Alaminos</li>
+                <li>Based on "Linear Algebra Done Right" by Axler and "Linear Algebra" by Friedberg.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name unam">Calculus I-IV (UNAM, 2019-2021)</span>
+              <ul>
+                <li>Lecturer: Prof. Javier Fernández García — has been the best professor I've ever had in my entire life.</li>
+                <li>Any standard univariate and multivariate differential and integral calculus book will do (Piskunov, Apostol, Spivak, etc.).</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name unam">Mathematical Analysis II: Functional Analysis (UNAM, 2022)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Mónica Alicia Clapp</li>
+                <li>The course was entirely based on her extraordinary book <a href="https://papirhos.matem.unam.mx/tul/P_T_02/index.html" target="_blank">"Análisis Matemático"</a>.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name unam">Mathematical Logic I-III (UNAM, 2021-2022)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Carlos Torres Alcaraz — has been one of the funniest and most inspiring lecturers I've ever had.</li>
+                <li>The course was entirely based on his extraordinary book <a href="https://www.amazon.com.mx/Hilbert-G%C3%B6del-dos-perspectivas-matem%C3%A1tica/dp/6073009194" target="_blank">"Hilbert y Gödel: dos perspectivas de la matemática"</a> and another unpublished book of his on Gödel's incompleteness theorems (please let me know if it has been published already). We also relied on Smullyan's amazing book <a href="https://www.amazon.de/-/en/G%C3%B6dels-Incompleteness-Theorems-Oxford-Guides/dp/0195046722" target="_blank">"Gödel's Incompleteness Theorems"</a>.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name unam">Computability Theory (UNAM, 2022)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Omar Antolín Camarena. This was one of the lectures that heavily influenced my future direction of study.</li>
+                <li>The course was entirely based on the book <a href="https://www.amazon.de/Computability-Theory-Student-Mathematical-Library/dp/082187392X" target="_blank">"Computability Theory"</a> by Rebecca Weber.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name unam">Geometry and Dynamical Systems (UNAM, 2022)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Renato Leriche Vázquez. I learned to code in Julia for this course and totally fell in love with the language.</li>
+                <li>Probably the best reference book I've used in any course: <a href="https://www.amazon.de/-/en/Indras-Pearls-Vision-Felix-Klein/dp/1107564743" target="_blank">"Indra's Pearls: The Vision of Felix Klein"</a> by David Mumford.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Combinatorial Optimization (Bonn, Wintersemester 2023)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Stephan Held</li>
+                <li>Outline of topics: Matching in graphs, T-joins and b-matchings, Polyhedra for TSP, Matroids and Generalizations, Splitting Off Lemma and Connectivity in graphs, Submodular flows, Graph Orientation, Directed Cuts, Survivable Network Design.</li>
+                <li>Mostly taken from the book <a href="https://www.or.uni-bonn.de/~vygen/co.html" target="_blank">"Combinatorial Optimization. Theory and Algorithms"</a> by Bernhard Korte and Jens Vygen.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Scientific Computing I (Bonn, Wintersemester 2023)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Jürgen Dölz</li>
+                <li>Outline of topics: PDE Theory, Finite Differences, Variational Formulations and Sobolev Spaces, The Galerkin Method, The Finite Element Method, Error Analysis for Elliptic PDEs, Implementation and Adaptivity, Multigrid Methods, Parabolic PDEs.</li>
+                <li>As far as I know, no specific book was followed, but a general reference is <a href="https://www.amazon.de/-/en/Finite-Elements-Applications-Mechanics-Elasticity/dp/0521705185" target="_blank">"Finite Elements"</a> by D. Braess.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Approximation Algorithms (Bonn, Sommersemester 2024)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Vera Traub</li>
+                <li>Outline of topics: Bin packing, Set covering, Scheduling, MAX-SAT, TSP, Knapsack, LP Formulations, Randomized Algorithms, Steiner Trees, k-Steiner Trees, Prize-Collecting Steiner Forests, PTAS, FPTAS, Hardness of Approximation.</li>
+                <li>A great reference book is <a href="https://ics.uci.edu/~vazirani/book.pdf" target="_blank">"Approximation Algorithms"</a> by Vijay Vazirani (whom I had the enormous privilege of meeting in Bonn).</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Inverse Problems and Convex Optimization (Bonn, Sommersemester 2024)</span>
+              <ul>
+                <li>Lecturers: Prof. Dr. Alexander Effland and Prof. Dr.-Ing. Jan Hasenauer</li>
+                <li>Outline of topics: Convex Functions, Subdifferentials, Subgradient Methods, Proximal Operators, Convex Conjugates, Min-Max Theorems, Primal Dual Methods, Optimal Transport, Identifiability and Uncertainty Analysis, Quality of Fit, Frequentist Methods for Uncertainty Analysis, Bayesian Uncertainty Analysis, Metropolis-Hastings Algorithm.</li>
+                <li>Reference: <a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf" target="_blank">"Convex Optimization"</a> by Stephen Boyd and Lieven Vandenberghe.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Seminar on Probabilistic Algorithms (Bonn, Sommersemester 2024)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Thomas Kesselheim</li>
+                <li>I gave a talk on the paper <a href="https://arxiv.org/abs/2308.05067" target="_blank">"Controlling Tail Risk in Online Ski-Rental"</a> by Michael Dinitz, Sungjin Im, Thomas Lavastida, Benjamin Moseley, Sergei Vassilvitskii.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Seminar on Uncertainty Quantification (Bonn, Sommersemester 2024)</span>
+              <ul>
+                <li>Lecturer: Prof. Dr. Jürgen Dölz</li>
+                <li>I gave a talk on the paper <a href="https://www.researchgate.net/publication/222535147_Global_sensitivity_indices_for_nonlinear_mathematical_models_and_their_Monte_Carlo_estimates" target="_blank">"Global sensitivity indices for nonlinear mathematical models and their Monte Carlo estimates"</a> by I.M. Sobol.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Continuous Methods in Discrete Mathematics (Bonn, Wintersemester 2024)</span>
+              <ul>
+                <li class="flag">This was an amazing lecture by Prof. Dr. László Végh, which I immensely enjoyed (it was also his first lecture in Bonn).</li>
+                <li>Outline of topics: Semidefinite Programming and Graph Coloring, The Lovász Theta Number, Shannon Capacity and Sums of Squares, The Multiplicative Weights Update Method, Solving Linear Programs Approximately, Semidefinite Programming and Multicommodity Flows, Electrical Flows, The Matrix Tree Theorem and Spectral Sparsification, Cheeger's Inequality, Solving Laplacian Systems.</li>
+                <li><a href="https://people.orie.cornell.edu/dpw/orie6334/" target="_blank">These notes</a> by Dr. David Williamson give a good overview of the course.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Modelling of Disease Dynamics (Bonn, Wintersemester 2024)</span>
+              <ul>
+                <li>Lecturer: Dr. Martin Joachim Kühn</li>
+                <li>Outline of topics: Generation-based Models, Compartment Models, Steady States of ODE Systems, Generalizations of the Reproduction Number, Integro-Differential Equation-based Models, Stochastic Models, Agent-based Models.</li>
+                <li>The course was mostly based on the book <a href="https://link.springer.com/book/10.1007/978-1-4939-9828-9" target="_blank">"Mathematical Models in Epidemiology"</a> by Carlos Castillo-Chávez and Zhilan Feng.</li>
+              </ul>
+            </li>
+            <li>
+              <span class="course-name bonn">Discrete Random Matrices (Bonn, Wintersemester 2024)</span>
+              <ul>
+                <li class="flag">Lecturer: Prof. Dr. Lisa Sauermann. She's one of the best lecturers I've had in my life!</li>
+                <li>Outline of topics: Given an n×n matrix with independent identically distributed random {-1,1}-valued entries, what is the probability that the matrix is invertible?</li>
+                <li>The course was a great and detailed exposition of the paper <a href="https://arxiv.org/abs/1812.09016" target="_blank">"Singularity of random Bernoulli matrices"</a> by Konstantin Tikhomirov.</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
 
-    <img class="img-responsive" src="./Bonn.jfif" alt="Univeristy of Bonn" 
-      style="max-width:50%; text-align:justify"><figcaption>The beautiful <a href="https://www.uni-bonn.de/en">University of Bonn</figcaption></a>
+        <details class="collapsible-section">
+          <summary>Calisthenics</summary>
+          <div class="info-row">
+            <span class="info-label">🏋️ Background</span>
+            <span class="info-value">
+              I've formally practiced calisthenics since the beginning of 2022, but I've been practicing it informally since I was about 16 years old, so I decided it would be a nice idea to upload some of my favorite routines and my best times. My favorite type of training is <a href="https://www.healthline.com/health/emom" target="_blank">EMOM (Every Minute on the Minute)</a>, and I've been doing it more often, especially since I moved to Germany, where I don't have a proper coach or training group.
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">🏟️ FIBO 2025</span>
+            <span class="info-value">I was very lucky to have attended <a href="https://www.fibo.com/" target="_blank">FIBO 2025</a> in Cologne, where I met some of the best calisthenics athletes in the world. Here are the routines for male and female resistance qualification rounds:</span>
+          </div>
+
+          <h3 style="color: rgb(255,79,220); text-align:center;">Resistance Qualification Rounds</h3>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Male</th><th>Female</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Round of 16:</strong><br>
+                  - 30-second L-sit hold on dip bars (unbroken)<br>
+                  - 30 dips<br>
+                  - 30 pull ups<br>
+                  - 30 push ups<br>
+                  - 5 muscle ups<br>
+                  - 20 squats with 20 kg vest<br>
+                  - 20 dips<br>
+                  - 20 pull ups<br>
+                  - 20 push ups<br>
+                  - 5 muscle ups<br>
+                  - 20 squats with 20 kg vest<br>
+                  - 30-second chin-over-the-bar hold (unbroken)
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Quarter-finals:</strong><br>
+                  - 10 pull ups | 10 muscle ups | 10 straight bar dips<br>
+                  - 15 squats with 20 kg weight vest<br>
+                  - 8 pull ups | 8 muscle ups | 8 straight bar dips<br>
+                  - 15 squats with 20 kg weight vest<br>
+                  - 6 pull ups | 6 muscle ups | 6 straight bar dips<br>
+                  - 15 squats with 20 kg weight vest<br>
+                  - 4 pull ups | 4 muscle ups | 4 straight bar dips<br>
+                  - 15 squats with 20 kg weight vest<br>
+                  - 2 pull ups | 2 muscle ups | 2 straight bar dips
+                </td>
+                <td>
+                  <strong>Quarter-finals:</strong><br>
+                  - 5 muscle ups<br>
+                  - 20 dips<br>
+                  - 20 pull ups<br>
+                  - 20 push ups<br>
+                  - 20 squats with 10 kg weight vest<br>
+                  - 10 dips<br>
+                  - 10 pull ups<br>
+                  - 10 push ups<br>
+                  - 10 squats with 10 kg weight vest<br>
+                  - 20-second chin-over-the-bar hold (unbroken)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Semi-finals:</strong><br>
+                  - Bodyweight: 20 pull ups | 20 dips<br>
+                  - With 10 kg: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
+                  - With 10 kg: 20 pull ups | 20 dips<br>
+                  - With 5 kg: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
+                  - With 20 kg: 20 pull ups | 20 dips<br>
+                  - Bodyweight: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
+                  - 30 deadstop push ups<br>
+                  - 30 squats with 20 kg weight vest<br>
+                  - 5 muscle ups
+                </td>
+                <td>
+                  <strong>Semi-finals:</strong><br>
+                  - Bodyweight: 5 muscle ups | 5 straight bar dips | 5 pull ups (unbroken)<br>
+                  - 20 squats with 10 kg weight vest<br>
+                  - 20-second L-sit hold on dip bars (unbroken)<br>
+                  - Bodyweight: 3 muscle ups | 3 straight bar dips | 3 pull ups (unbroken)<br>
+                  - 20 squats with 10 kg weight vest<br>
+                  - 20-second L-sit hold on dip bars (unbroken)<br>
+                  - Bodyweight: 1 muscle up | 1 straight bar dip | 1 pull up (unbroken)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3 style="color: rgb(255,79,220); text-align:center;">Leg Day</h3>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Exercise</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>8 pistol squats (each leg)</td><td>3 circuits (each per column)</td></tr>
+              <tr><td>20 explosive lunges</td><td></td></tr>
+              <tr><td>30 squats + jump</td><td></td></tr>
+              <tr><td>15 push ups</td><td></td></tr>
+              <tr><td>10 diamond push ups</td><td></td></tr>
+              <tr><td>4 sets + 1.5 min rest</td><td>Under 15 mins</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3 style="color: rgb(255,79,220); text-align:center;">Push Day</h3>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Exercise</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>15 push ups (different types)</td><td>EMOM</td></tr>
+              <tr><td>15 sec L-sit</td><td></td></tr>
+              <tr><td>10 diamond push ups</td><td></td></tr>
+              <tr><td>20 dips</td><td></td></tr>
+              <tr><td>4 rounds + 2 min rest</td><td>10 mins exercise + 10 mins rest</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3 style="color: rgb(255,79,220); text-align:center;">Pull Day</h3>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Exercise</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>5 muscle ups</td><td>Everything without letting go of the bar</td></tr>
+              <tr><td>10 bar dips</td><td>4 times</td></tr>
+              <tr><td>5 pull ups</td><td>5 min break between sets</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3 style="color: rgb(255,79,220); text-align:center;">Bar Barian Requirements</h3>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Exercise</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>5 muscle ups</td><td></td></tr>
+              <tr><td>45 dips</td><td>Everything in under 6 minutes</td></tr>
+              <tr><td>25 pull ups</td><td></td></tr>
+              <tr><td>55 push ups</td><td></td></tr>
+              <tr><td>5 muscle ups</td><td></td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3 style="color: rgb(255,79,220); text-align:center;">Halloween Special (100 muscle ups)</h3>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Exercise</th><th>Details</th></tr></thead>
+            <tbody>
+              <tr><td>2 muscle ups every minute</td><td>50 minutes</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h3 style="color: rgb(0,247,255); text-align:center;">Two Fun Circuits</h3>
+          <h4 style="color:#fff;">Circuit 1 (maximum 20 minutes)</h4>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Push Ups</th><th>Pull Ups</th><th>Squats</th></tr></thead>
+            <tbody>
+              <tr><td>30 push ups</td><td>10 pull ups</td><td>30 squats</td></tr>
+              <tr><td>25 push ups</td><td>10 pull ups</td><td>35 squats</td></tr>
+              <tr><td>20 push ups</td><td>10 pull ups</td><td>40 squats</td></tr>
+              <tr><td>15 push ups</td><td>10 pull ups</td><td>45 squats</td></tr>
+              <tr><td>10 push ups</td><td>10 pull ups</td><td>50 squats</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4 style="color:#fff;">Circuit 2 (maximum 15 minutes)</h4>
+          <div class="table-wrap">
+          <table>
+            <thead><tr><th>Pull Ups</th><th>Handstand (seconds)</th><th>Push Ups</th></tr></thead>
+            <tbody>
+              <tr><td>2 pull ups</td><td>10 sec</td><td>5 push ups</td></tr>
+              <tr><td>4 pull ups</td><td>15 sec</td><td>10 push ups</td></tr>
+              <tr><td>6 pull ups</td><td>20 sec</td><td>15 push ups</td></tr>
+              <tr><td>8 pull ups</td><td>25 sec</td><td>20 push ups</td></tr>
+              <tr><td>10 pull ups</td><td>30 sec</td><td>25 push ups</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <figure class="figure-block">
+            <img src="./Bonn.jfif" alt="University of Bonn">
+            <figcaption>The beautiful <a href="https://www.uni-bonn.de/en" target="_blank">University of Bonn</a></figcaption>
+          </figure>
+        </details>
+
+        <h1>Menu</h1>
+        <ul class="menu-grid">
+            <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+            <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+            <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+            <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+            <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+            <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+            <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+            <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+            <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+        </ul>
     </div>
-    <br>
-    <h1>Menu</h1>
-    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
-        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
-        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
-        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
-        
-        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
-        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
-        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
-        
-        <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
-        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
-        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
-        
-    </ul>
 </body>
-
 </html>
-
-
-

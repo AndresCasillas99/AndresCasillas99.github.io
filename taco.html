@@ -1,50 +1,67 @@
+<!DOCTYPE html>
 <html>
 <head>
-<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Casillas García de Presno</title>
-    <!--for GitHub, Youtube and LinkedIn logos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     html { font-size: 16px; }
-    body { font-family: monospace; color:  yellow; }
+    body { font-family: monospace; color: yellow; background: #000000; }
+    a { color: yellow; }
+    a:visited { color: #e6c200; }
+    a:hover, a:focus { color: #fff066; text-decoration: underline; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.25rem; }
+    p  { font-size: 1rem; }
+    @media (max-width: 480px) { html { font-size: 16px; } }
 
-    h1 { font-size: 2rem; }    /*means twice the html font-size*/
-    h2 { font-size: 1.25rem; } 
-    p  { font-size: 1rem; }    
-
-    @media (max-width: 600px) {
-      html { font-size: 14px; } /* smaller on phones */
+    .content-container { max-width: 900px; margin: 0 auto; }
+    .collapsible-section { margin-top: 32px; }
+    .collapsible-section summary {
+      color: yellow; font-size:0.8em; text-transform:uppercase; letter-spacing:2px;
+      border-bottom:1px solid #333; padding-bottom:6px; cursor:pointer; list-style:none;
     }
-  </style>
-</head>
-<body style="background-color: black;"></body>
+    .collapsible-section summary::-webkit-details-marker { display:none; }
+    .collapsible-section summary::before { content:"▶ "; display:inline-block; transition: transform 0.15s ease; }
+    .collapsible-section[open] summary::before { transform: rotate(90deg); }
 
-    <h1 style="color: white;">A map of the best "taquerías" in Mexico City:</h1>
-    <br>
-    <br>
-    <!-- Google Map Embed -->
-    <center>
-        <iframe
-        width="80%"
-        height="80%"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/d/u/0/embed?mid=1L90r_5nfeq6DIjPmFn7RuokIDcO43K4&ehbc=2E312F" allowfullscreen>
-        </iframe>
-    </center>
-   <h1>Menu</h1>
-    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
-        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
-        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
-        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
-        
-        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
-        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
-        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
-        
-        <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
-        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
-        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
-        
-    </ul>
+    .map-frame { width:100%; height:600px; border:0; margin-top:16px; }
+
+    .menu-grid { list-style:none; padding:8px 12px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    @media (max-width: 480px) {
+      .menu-grid { grid-template-columns:repeat(2,1fr); }
+      .map-frame { height:70vh; }
+    }
+    @media (max-width: 350px) { .menu-grid { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <div class="content-container" style="color:#ffffff;">
+        <h1 style="text-align:center;">A map of the best "taquerías" in Mexico City</h1>
+
+        <details class="collapsible-section" open>
+          <summary>Map</summary>
+          <iframe
+            class="map-frame"
+            src="https://www.google.com/maps/d/u/0/embed?mid=1L90r_5nfeq6DIjPmFn7RuokIDcO43K4&ehbc=2E312F"
+            title="Best tacos in Mexico City"
+            allowfullscreen>
+          </iframe>
+        </details>
+
+        <h1>Menu</h1>
+        <ul class="menu-grid">
+            <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+            <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+            <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+            <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+            <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+            <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+            <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+            <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+            <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+        </ul>
+    </div>
 </body>
 </html>

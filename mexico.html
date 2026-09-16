@@ -1,122 +1,144 @@
-
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Casillas García de Presno</title>
-    <!--for GitHub, Youtube and LinkedIn logos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     html { font-size: 16px; }
-    body { font-family: monospace; color:  white; }
-    
-    a { color: yellow; } /* yellow hyperlinks */
+    body { font-family: monospace; color: white; background: #000000; }
+    a { color: yellow; }
     a:visited { color: #e6c200; }
     a:hover, a:focus { color: #fff066; text-decoration: underline; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.25rem; }
+    p  { font-size: 1rem; }
+    @media (max-width: 480px) { html { font-size: 16px; } }
 
-
-    h1 { font-size: 2rem; }    /*means twice the html font-size*/
-    h2 { font-size: 1.25rem; } 
-    p  { font-size: 1rem; }    
-
-    @media (max-width: 600px) {
-      html { font-size: 14px; } /* smaller on phones */
+    .content-container { max-width: 900px; margin: 0 auto; }
+    .banner {
+      background: linear-gradient(90deg, #006847 0% 33.333%, #FFFFFF 33.333% 66.666%, #CE1126 66.666% 100%);
+      color: black; text-align: center; margin: 0.5rem 0; padding: 0.5rem; border-radius: 10px;
     }
-  </style>
+    .banner span {
+      display: inline-block; background: #FFFFFF; color: #000; padding: 1.2rem 1rem;
+      border-radius: 30px;
+    }
+
+    .info-row { display:flex; gap:12px; margin-bottom:16px; align-items:baseline; border-left:3px solid #444; padding-left:12px; }
+    .info-label { color: yellow; font-size:0.85em; text-transform:uppercase; letter-spacing:1px; min-width:160px; flex-shrink:0; }
+    .info-value { color:#fff; text-align:left; }
+
+    .collapsible-section { margin-top: 32px; }
+    .collapsible-section summary {
+      color: yellow; font-size:0.8em; text-transform:uppercase; letter-spacing:2px;
+      border-bottom:1px solid #333; padding-bottom:6px; cursor:pointer; list-style:none;
+    }
+    .collapsible-section summary::-webkit-details-marker { display:none; }
+    .collapsible-section summary::before { content:"▶ "; display:inline-block; transition: transform 0.15s ease; }
+    .collapsible-section[open] summary::before { transform: rotate(90deg); }
+    .collapsible-section .info-row { margin-top:16px; }
+
+    .gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; align-items:start; text-align:center; padding:16px 0; color:#fff; }
+    .gallery img { max-width:70%; height:auto; }
+    .gallery figcaption { margin-top:6px; color:yellow; }
+
+    .menu-grid { list-style:none; padding:8px 12px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    @media (max-width: 480px) {
+      .info-row { flex-direction:column; gap:4px; align-items:flex-start; }
+      .info-label { min-width:0; }
+      .menu-grid { grid-template-columns:repeat(2,1fr); }
+      .gallery { grid-template-columns:1fr; }
+      .gallery img { max-width:90%; }
+    }
+    @media (max-width: 350px) { .menu-grid { grid-template-columns:1fr; } }
+    </style>
 </head>
-<body style="background-color: black">      
-    <h1 style="background-color: black; background: linear-gradient(90deg,
-        #006847 0% 33.333%,
-        #FFFFFF 33.333% 66.666%,
-        #CE1126 66.666% 100%); color: black; text-align: center; margin: 0.5rem; padding: 0.5rem;">
-    <span style="display:inline-block;background:#FFFFFF;color:#000;padding:2rem 0.2rem;border-radius:30px;white-space:nowrap;">Mexico is an amazing country!</span>
-  </h1>
-    <p>
-      There are many beautiful things that I would like to say about Mexico but for the meantime I'll restrict myself to give a list of the many great mathematicians
-      that this country has had and which are unfortunately not as known as they should be: 
-      <br>
-      <br>
-      <p style="color: yellow;">
-        <a href="https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_de_la_Pe%C3%B1a">Jose Antonio de la Peña Mena</a>, 
-        <a href="https://www.fciencias.unam.mx/directorio/28396">Diana Avella Alaminos</a>, 
-        <a href="https://www.fciencias.unam.mx/directorio/64397">Gilberto Bruno Perez</a>, 
-        <a href="https://www.youtube.com/watch?v=Qxl8AQGxy6M">Julio César Guevara Bravo</a>, 
-        <a href="https://www.fciencias.unam.mx/directorio/34616">Javier Fernández García</a>, 
-        <a href="https://paginas.matem.unam.mx/matematicos/matematicos-a-g/matematicos-b/bracho-javier/251-breve-biografia-de-javier-bracho">Javier Bracho Carpizo</a>, 
-        <a href="https://www.matem.unam.mx/fsd/laura">Laura Ortiz Bobadilla</a>, 
-        <a href="https://www.youtube.com/watch?v=F-mUE3rEKBo">Carlos Torres Alcaráz</a>, 
-        <a href="https://camperoarena.xyz/">Gabriela Campero Arena</a>, 
-        <a href="https://es.wikipedia.org/wiki/Isabel_Hubard_Escalera">Isabel Hubard Escalera</a>, 
-        <a href="https://es.wikipedia.org/wiki/Sotero_Prieto_Rodr%C3%ADguez">Sotero Prieto Rodríguez</a>,
-        <a href="https://es.wikipedia.org/wiki/M%C3%B3nica_Clapp">Mónica Alicia Clapp Jiménez</a>, 
-        <a href="https://es.wikipedia.org/wiki/Carlos_Prieto_de_Castro">Carlos Prieto de Castro</a>, 
-        <a href="https://colnal.mx/integrantes/jose-adem/">José Adem Chahín</a>, 
-        <a href="https://www.math.ucdavis.edu/~deloera/">Jesús A. de Loera</a>, 
-        <a href="https://es.wikipedia.org/wiki/Graciela_Salicrup">Graciela Salicurp</a>, 
-        <a href="https://es.wikipedia.org/wiki/Alberto_Barajas_Celis">Alberto Barajas Celis</a>, 
-        <a href="https://matematicos.matem.unam.mx/matematicos-i-p/matematicos-n/alfonso-napoles-gandara">Alfonso Nápoles Gándara</a>, 
-        <a href="https://paginas.matem.unam.mx/matematicos/matematicos-r-z/matematicos-u/jorge-urrutia">Jorge Urrutia Galicia</a>, 
-        <a href="https://www.matem.unam.mx/fsd/deteresa">María de la Luz Jimena de Teresa de Oteyza</a>, 
-        <a href="https://www.fciencias.unam.mx/directorio/33351">Vinicio Gómez Gutiérrez</a>, 
-        <a href="https://www.matem.unam.mx/~omar/">Omar Antolín Camarena</a>, 
-        <a href="https://www.matem.unam.mx/~rgomez/">Ricardo Gómez Aiza</a>,
-        <a href="https://pablodelafuente.xyz/home">Pablo de la Fuente Parres Quintero</a>,  
-        <a href="https://statistics.berkeley.edu/people/adrian-gonzalez-casanova">Adrián González Casanova</a>, 
-        <a href="https://www.saraiht.com/">Alma Sarí Hernández Torres</a>, 
-        <a href="https://www.matem.unam.mx/~max/">Max Neumann Coto</a>, 
-        <a href="https://www.matem.unam.mx/fsd/pontigo">Jessie Diana Pontigo Herrera</a>, 
-        <a href="https://es.wikipedia.org/wiki/Sergio_Rajsbaum">Sergio Rajsbaum Gorodezky</a>,
-        <a href="https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_Seade_Kuri">José Antonio Seade Kuri</a>, 
-        <a href="https://sites.google.com/view/jsimental">José Eduardo Simental Rodríguez</a>,
-        <a href="https://sites.google.com/view/nataliajonard/home">Natalia Jonard</a>,
-        <a href="https://www.youtube.com/channel/UCUvtSnyW-7moWnD08S28OKw?app=desktop">Javier Páez Cárdenas</a>.
-      </p>
-      <br>
-      <br>
-      And many more of course.
-      <br>
-      <br>
-      <br>
-      Some beautiful places in Mexico that I like:
-      <br>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start;text-align:center;padding:12px 0;">
-  <figure style="margin:0;">
-    <img class="img-responsive" src="./MineralDelChico.JPG" alt="Mineral del Chico" style="width:50%;height:auto;">
-    <figcaption style="margin-top:6px;color:yellow;"><a href="https://www.mineraldelchico.com.mx/que-visitar/">Mineral del Chico, Hidalgo</a></figcaption>
-  </figure>
+<body>
+    <div class="content-container" style="color:#ffffff;">
+      <h1 class="banner"><span>Mexico is an amazing country!</span></h1>
 
-  <figure style="margin:0;">
-    <img class="img-responsive" src="./Zacatlan.jpg" alt="Zacatlán de las manzanas" style="width:50%;height:auto;">
-    <figcaption style="margin-top:6px;color:yellow;">A beautiful mural in <a href="https://pueblosmagicos.mexicodesconocido.com.mx/puebla/zacatlan-de-las-manzanas/">Zacatlán de las manzanas</a></figcaption>
-  </figure>
+      <details class="collapsible-section" open>
+        <summary>Great Mexican mathematicians</summary>
+        <div class="info-row">
+          <span class="info-label">🇲🇽 Note</span>
+          <span class="info-value">
+            There are many beautiful things that I would like to say about Mexico, but for the meantime I'll restrict myself to giving a list of the many great mathematicians that this country has had and which are unfortunately not as well known as they should be:
+          </span>
+        </div>
+        <p style="color: yellow; line-height:1.8;">
+          <a href="https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_de_la_Pe%C3%B1a" target="_blank">Jose Antonio de la Peña Mena</a>,
+          <a href="https://www.fciencias.unam.mx/directorio/28396" target="_blank">Diana Avella Alaminos</a>,
+          <a href="https://www.fciencias.unam.mx/directorio/64397" target="_blank">Gilberto Bruno Perez</a>,
+          <a href="https://www.youtube.com/watch?v=Qxl8AQGxy6M" target="_blank">Julio César Guevara Bravo</a>,
+          <a href="https://www.fciencias.unam.mx/directorio/34616" target="_blank">Javier Fernández García</a>,
+          <a href="https://paginas.matem.unam.mx/matematicos/matematicos-a-g/matematicos-b/bracho-javier/251-breve-biografia-de-javier-bracho" target="_blank">Javier Bracho Carpizo</a>,
+          <a href="https://www.matem.unam.mx/fsd/laura" target="_blank">Laura Ortiz Bobadilla</a>,
+          <a href="https://www.youtube.com/watch?v=F-mUE3rEKBo" target="_blank">Carlos Torres Alcaráz</a>,
+          <a href="https://camperoarena.xyz/" target="_blank">Gabriela Campero Arena</a>,
+          <a href="https://es.wikipedia.org/wiki/Isabel_Hubard_Escalera" target="_blank">Isabel Hubard Escalera</a>,
+          <a href="https://es.wikipedia.org/wiki/Sotero_Prieto_Rodr%C3%ADguez" target="_blank">Sotero Prieto Rodríguez</a>,
+          <a href="https://es.wikipedia.org/wiki/M%C3%B3nica_Clapp" target="_blank">Mónica Alicia Clapp Jiménez</a>,
+          <a href="https://es.wikipedia.org/wiki/Carlos_Prieto_de_Castro" target="_blank">Carlos Prieto de Castro</a>,
+          <a href="https://colnal.mx/integrantes/jose-adem/" target="_blank">José Adem Chahín</a>,
+          <a href="https://www.math.ucdavis.edu/~deloera/" target="_blank">Jesús A. de Loera</a>,
+          <a href="https://es.wikipedia.org/wiki/Graciela_Salicrup" target="_blank">Graciela Salicrup</a>,
+          <a href="https://es.wikipedia.org/wiki/Alberto_Barajas_Celis" target="_blank">Alberto Barajas Celis</a>,
+          <a href="https://matematicos.matem.unam.mx/matematicos-i-p/matematicos-n/alfonso-napoles-gandara" target="_blank">Alfonso Nápoles Gándara</a>,
+          <a href="https://paginas.matem.unam.mx/matematicos/matematicos-r-z/matematicos-u/jorge-urrutia" target="_blank">Jorge Urrutia Galicia</a>,
+          <a href="https://www.matem.unam.mx/fsd/deteresa" target="_blank">María de la Luz Jimena de Teresa de Oteyza</a>,
+          <a href="https://www.fciencias.unam.mx/directorio/33351" target="_blank">Vinicio Gómez Gutiérrez</a>,
+          <a href="https://www.matem.unam.mx/~omar/" target="_blank">Omar Antolín Camarena</a>,
+          <a href="https://www.matem.unam.mx/~rgomez/" target="_blank">Ricardo Gómez Aiza</a>,
+          <a href="https://pablodelafuente.xyz/home" target="_blank">Pablo de la Fuente Parres Quintero</a>,
+          <a href="https://statistics.berkeley.edu/people/adrian-gonzalez-casanova" target="_blank">Adrián González Casanova</a>,
+          <a href="https://www.saraiht.com/" target="_blank">Alma Sarí Hernández Torres</a>,
+          <a href="https://www.matem.unam.mx/~max/" target="_blank">Max Neumann Coto</a>,
+          <a href="https://www.matem.unam.mx/fsd/pontigo" target="_blank">Jessie Diana Pontigo Herrera</a>,
+          <a href="https://es.wikipedia.org/wiki/Sergio_Rajsbaum" target="_blank">Sergio Rajsbaum Gorodezky</a>,
+          <a href="https://es.wikipedia.org/wiki/Jos%C3%A9_Antonio_Seade_Kuri" target="_blank">José Antonio Seade Kuri</a>,
+          <a href="https://sites.google.com/view/jsimental" target="_blank">José Eduardo Simental Rodríguez</a>,
+          <a href="https://sites.google.com/view/nataliajonard/home" target="_blank">Natalia Jonard</a>,
+          <a href="https://www.youtube.com/channel/UCUvtSnyW-7moWnD08S28OKw?app=desktop" target="_blank">Javier Páez Cárdenas</a>.
+        </p>
+        <p>And many more, of course.</p>
+      </details>
 
-  <figure style="margin:0;">
-    <img class="img-responsive" src="./BarrancasDelCobre.jpg" alt="Barrancas del Cobre" style="width:50%;height:auto;">
-    <figcaption style="margin-top:6px;color:yellow;">Me riding <a href="https://ziprider.com/rides/coppercanyon/#:~:text=The%20ZipRider%20is%20a%20world,km%2Fhr%20(84%20mph)!">the longest zip line</a> in the world, at <a href="https://en.wikipedia.org/wiki/Copper_Canyon">Barrancas del Cobre</a>, <a href="https://en.wikipedia.org/wiki/Chihuahua_(state)">Chihuahua</a>.</figcaption>
-  </figure>
+      <details class="collapsible-section">
+        <summary>Beautiful places in Mexico</summary>
+        <div class="gallery">
+          <figure>
+            <img src="./MineralDelChico.JPG" alt="Mineral del Chico">
+            <figcaption><a href="https://www.mineraldelchico.com.mx/que-visitar/" target="_blank">Mineral del Chico, Hidalgo</a></figcaption>
+          </figure>
+          <figure>
+            <img src="./Zacatlan.jpg" alt="Zacatlán de las manzanas">
+            <figcaption>A beautiful mural in <a href="https://pueblosmagicos.mexicodesconocido.com.mx/puebla/zacatlan-de-las-manzanas/" target="_blank">Zacatlán de las manzanas</a></figcaption>
+          </figure>
+          <figure>
+            <img src="./BarrancasDelCobre.jpg" alt="Barrancas del Cobre">
+            <figcaption>Me riding <a href="https://ziprider.com/rides/coppercanyon/" target="_blank">the longest zip line</a> in the world, at <a href="https://en.wikipedia.org/wiki/Copper_Canyon" target="_blank">Barrancas del Cobre</a>, <a href="https://en.wikipedia.org/wiki/Chihuahua_(state)" target="_blank">Chihuahua</a>.</figcaption>
+          </figure>
+          <figure>
+            <img src="./Pumas.jpg" alt="Pumas's stadium">
+            <figcaption><a href="https://pumas.mx/" target="_blank">Pumas!</a></figcaption>
+          </figure>
+        </div>
+      </details>
 
-  <figure style="margin:0;">
-    <img class="img-responsive" src="./Pumas.jpg" alt="Pumas's stadium" style="width:50%;height:auto;">
-    <figcaption style="margin-top:6px;color:yellow;"><a href="https://pumas.mx/">Pumas!</a></figcaption>
-  </figure>
-</div>
-
-<h1>Menu</h1>
-    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
-        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
-        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
-        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
-        
-        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
-        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
-        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
-        
-        <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
-        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
-        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
-        
-    </ul>
+      <h1>Menu</h1>
+      <ul class="menu-grid">
+          <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+          <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+          <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+          <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+          <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+          <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+          <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+          <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+          <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+      </ul>
+    </div>
 </body>
-
 </html>
-
-

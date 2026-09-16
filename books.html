@@ -1,102 +1,147 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Casillas García de Presno</title>
-    <!--for GitHub, Youtube and LinkedIn logos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     html { font-size: 16px; }
-    body { font-family: monospace; color:  yellow; }
+    body { font-family: monospace; color: yellow; background: #000000; }
+    a { color: yellow; }
+    a:visited { color: #e6c200; }
+    a:hover, a:focus { color: #fff066; text-decoration: underline; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.25rem; }
+    p  { font-size: 1rem; }
+    @media (max-width: 480px) { html { font-size: 16px; } }
 
-    h1 { font-size: 2rem; }    /*means twice the html font-size*/
-    h2 { font-size: 1.25rem; } 
-    p  { font-size: 1rem; }    
+    .content-container { max-width: 900px; margin: 0 auto; }
+    .info-row { display:flex; gap:12px; margin-bottom:16px; align-items:baseline; border-left:3px solid #444; padding-left:12px; }
+    .info-label { color: yellow; font-size:0.85em; text-transform:uppercase; letter-spacing:1px; min-width:160px; flex-shrink:0; }
+    .info-value { color:#fff; text-align:left; }
 
-    @media (max-width: 600px) {
-      html { font-size: 14px; } /* smaller on phones */
+    .collapsible-section { margin-top: 32px; }
+    .collapsible-section summary {
+      color: yellow; font-size:0.8em; text-transform:uppercase; letter-spacing:2px;
+      border-bottom:1px solid #333; padding-bottom:6px; cursor:pointer; list-style:none;
     }
-  </style>
+    .collapsible-section summary::-webkit-details-marker { display:none; }
+    .collapsible-section summary::before { content:"▶ "; display:inline-block; transition: transform 0.15s ease; }
+    .collapsible-section[open] summary::before { transform: rotate(90deg); }
+    .collapsible-section .info-row { margin-top:16px; }
+
+    .gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; align-items:start; text-align:center; padding:16px 0; color:#fff; }
+    .gallery img { max-width:80%; height:auto; }
+
+    .book-list { list-style:none; padding:0; margin:16px 0 0 0; color:#fff; }
+    .book-list li { margin-bottom:10px; border-left:3px solid #444; padding-left:10px; }
+    .book-list li.highlight { border-left-color: red; color: #ff6b6b; }
+
+    .rank-list { color:#fff; margin:16px 0 0 0; padding-left: 24px; }
+    .rank-list li { margin-bottom:6px; }
+
+    .menu-grid { list-style:none; padding:8px 12px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    @media (max-width: 480px) {
+      .info-row { flex-direction:column; gap:4px; align-items:flex-start; }
+      .info-label { min-width:0; }
+      .menu-grid { grid-template-columns:repeat(2,1fr); }
+      .gallery { grid-template-columns:1fr; }
+      .gallery img { max-width:70%; }
+    }
+    @media (max-width: 350px) { .menu-grid { grid-template-columns:1fr; } }
+    </style>
 </head>
-<body style="background-color: black;"></body>
-<h1 style="text-align: center; color: white;">A short story fiction book that I wrote in 2020:</h1>
-<center>
-<img class="img-responsive" src="./Surrealismos1.JPG" alt="Surrealismos1" 
-  style="max-width:25%; text-align:justify">
-<img class="img-responsive" src="./Surrealismos2.JPG" alt="Surrealismos2" 
-    style="max-width:25%; text-align:justify">
-</center>
-      <h1 style="text-align: center;">I am very proud to announce that I have finished reading Marcel Proust's "À la recherche du temps perdu" -all seven volumes! This journey
-      started in 2017 and finished in 2025. It is my absolute favorite book of all time, and I even feel a bit strange without it :( </h1>
-      My ranking of its volumes (in spanish) is:
-      <ol>
-        <li> Volume 4: Sodoma y Gomorra. </li>
-        <li> Volume 2: A la Sombra de las Muchachas en Flor. </li>
-        <li> Volume 1: Por el Camino de Swann.</li>
-        <li> Volume 7: El Tiempo Recobrado.</li>
-        <li> Volume 5: La Prisionera. </li>
-        <li> Volume 6: La Fugitiva. </li>
-        <li> Volume 3: El Mundo de Guermantes.</li>
-      </ol>
-      <h1 style="text-align: center; color: white;">Some of my favorite math books</h1>
-      <br>
-      <ul>
-          <li style="color: red;">A New Kind of Science, Stephen Wolfram.</li>
-          <li style="color: red;">Cellular Automata and Complexity, Stephen Wolfram.</li>
-          <li>A Multigrid Tutorial, William Briggs.</li>
-          <li>Theory of Complex Functions, Reinhold Remmert.</li>
-          <li>Una introducción a los fundamentos del cálculo: el infinito y los números reales, Javier Fernández García.</li>
-          <li>Indra’s Pearls: The Vision of Felix Klein, David Mumford, Caroline Series and David Wright.</li>
-          <li>Fractals Everywhere, Michael F. Barnsley.</li>
-          <li>La Historia de un Empujón, Laura Ortiz and Ernesto Rosales.</li>
-          <li>Computability Theory, Rebecca Weber.</li>
-          <li>Approximation Algorithms, Vijay Vazirani.</li>
-          <li>Godel’s Incompleteness Theorems, Raymund Smullyan.</li>
-          <li>Proofs from THE BOOK, Martin Aigner and Günter M. Ziegler.</li>
-          <li>Combinatorial Optimization, Bernhard Korte and Jens Vygen.</li>
-          <li>The Book of Prime Number Records, Paulo Ribenboim.</li>
-          <li>Hilbert y Godel: Dos perspectivas de la matemática, Carlos Torres Alcaráz</li>
-          <li>Handbook of Natural Computing, Grzegorz Rozenberg, Thomas Bäck, Joost N. Kok.</li>
-          <li>17 Lectures on Fermat Numbers: From Number Theory to Geometry, Florian Luca et. al.</li>
-      </ul>
-      <h1 style="text-align: center; color: white">Some of my favorite non-math books</h1>
-      <br>
-      <ul>
-          <li style="color: red;">À la recherche du temps perdu, Marcel Proust.</li>
-          <li>Slaughterhouse Five, Galapagos, Armageddon in Retrospect, and The Sirens of Titan, Kurt Vonnegut.</li>
-          <li>El Ruletista and Lulu, Mircea Cărtărescu.</li>
-          <li>Seda, Mr. Gwyn, and Esta Historia, Alessandro Baricco.</li>
-          <li>El amor en los tiempos del cólera, Gabriel García Márquez.</li>
-          <li>La Piel Fría, Albert Sánchez Piñol.</li>
-          <li>Ficciones and El Aleph, Jorge Luis Borges.</li>
-          <li>Primevera con Esquina Rota and La Tregua, Mario Benedetti.</li>
-          <li>Las batallas en el desierto, José Emilio Pacheco.</li>
-          <li>Los años del Águila, Claude Fell.</li>
-          <li>El Bigote,  Emmanuel Carrère.</li>
-          <li>Niebla, Miguel de Unamuno.</li>
-      </ul>
-      <br>
-      <br>
-      <br>  
+<body>
+    <div class="content-container" style="color:#ffffff;">
+        <h1 style="text-align:center;color:yellow;">Books</h1>
+
+        <details class="collapsible-section" open>
+          <summary>A short story book I wrote (2020)</summary>
+          <div class="gallery">
+            <img src="./Surrealismos1.JPG" alt="Surrealismos1">
+            <img src="./Surrealismos2.JPG" alt="Surrealismos2">
+          </div>
+        </details>
+
+        <details class="collapsible-section">
+          <summary>In Search of Lost Time</summary>
+          <div class="info-row">
+            <span class="info-label">📖 Milestone</span>
+            <span class="info-value">
+              I am very proud to announce that I have finished reading Marcel Proust's <em>"À la recherche du temps perdu"</em> — all seven volumes! This journey started in 2017 and finished in 2025. It is my absolute favorite book of all time, and I even feel a bit strange without it :(
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">🏆 My ranking</span>
+            <span class="info-value">
+              My ranking of its volumes (in Spanish) is:
+              <ol class="rank-list">
+                <li>Volume 4: Sodoma y Gomorra.</li>
+                <li>Volume 2: A la Sombra de las Muchachas en Flor.</li>
+                <li>Volume 1: Por el Camino de Swann.</li>
+                <li>Volume 7: El Tiempo Recobrado.</li>
+                <li>Volume 5: La Prisionera.</li>
+                <li>Volume 6: La Fugitiva.</li>
+                <li>Volume 3: El Mundo de Guermantes.</li>
+              </ol>
+            </span>
+          </div>
+        </details>
+
+        <details class="collapsible-section">
+          <summary>Favorite math books</summary>
+          <ul class="book-list">
+            <li class="highlight">A New Kind of Science, Stephen Wolfram.</li>
+            <li class="highlight">Cellular Automata and Complexity, Stephen Wolfram.</li>
+            <li>A Multigrid Tutorial, William Briggs.</li>
+            <li>Theory of Complex Functions, Reinhold Remmert.</li>
+            <li>Una introducción a los fundamentos del cálculo: el infinito y los números reales, Javier Fernández García.</li>
+            <li>Indra's Pearls: The Vision of Felix Klein, David Mumford, Caroline Series and David Wright.</li>
+            <li>Fractals Everywhere, Michael F. Barnsley.</li>
+            <li>La Historia de un Empujón, Laura Ortiz and Ernesto Rosales.</li>
+            <li>Computability Theory, Rebecca Weber.</li>
+            <li>Approximation Algorithms, Vijay Vazirani.</li>
+            <li>Gödel's Incompleteness Theorems, Raymond Smullyan.</li>
+            <li>Proofs from THE BOOK, Martin Aigner and Günter M. Ziegler.</li>
+            <li>Combinatorial Optimization, Bernhard Korte and Jens Vygen.</li>
+            <li>The Book of Prime Number Records, Paulo Ribenboim.</li>
+            <li>Hilbert y Gödel: Dos perspectivas de la matemática, Carlos Torres Alcaráz.</li>
+            <li>Handbook of Natural Computing, Grzegorz Rozenberg, Thomas Bäck, Joost N. Kok.</li>
+            <li>17 Lectures on Fermat Numbers: From Number Theory to Geometry, Florian Luca et al.</li>
+          </ul>
+        </details>
+
+        <details class="collapsible-section">
+          <summary>Favorite non-math books</summary>
+          <ul class="book-list">
+            <li class="highlight">À la recherche du temps perdu, Marcel Proust.</li>
+            <li>Slaughterhouse Five, Galápagos, Armageddon in Retrospect, and The Sirens of Titan, Kurt Vonnegut.</li>
+            <li>El Ruletista and Lulu, Mircea Cărtărescu.</li>
+            <li>Seda, Mr. Gwyn, and Esta Historia, Alessandro Baricco.</li>
+            <li>El amor en los tiempos del cólera, Gabriel García Márquez.</li>
+            <li>La Piel Fría, Albert Sánchez Piñol.</li>
+            <li>Ficciones and El Aleph, Jorge Luis Borges.</li>
+            <li>Primavera con Esquina Rota and La Tregua, Mario Benedetti.</li>
+            <li>Las batallas en el desierto, José Emilio Pacheco.</li>
+            <li>Los años del Águila, Claude Fell.</li>
+            <li>El Bigote, Emmanuel Carrère.</li>
+            <li>Niebla, Miguel de Unamuno.</li>
+          </ul>
+        </details>
+
+        <h1>Menu</h1>
+        <ul class="menu-grid">
+            <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+            <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
+            <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
+            <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+            <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+            <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+            <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+            <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
+            <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+        </ul>
     </div>
-    <h1>Menu</h1>
-    <ul style="list-style:none;padding:8px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
-        <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
-        <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
-        <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
-        
-        <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
-        <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
-        <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
-        
-        <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
-        <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
-        <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
-        
-    </ul>
-  </div> 
 </body>
-
 </html>
-
-
-
-

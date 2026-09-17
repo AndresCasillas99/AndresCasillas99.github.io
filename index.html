@@ -101,6 +101,17 @@
     }
     </style>
 </head>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (window.location.hash) {
+      var target = document.querySelector(window.location.hash);
+      if (target && target.tagName === 'DETAILS') {
+        target.open = true;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  });
+</script>
 <body>
     <div class="content-container" style="color: #ffffff;">
         <h1>Andrés Casillas García de Presno</h1>
@@ -211,20 +222,45 @@
             </li>
           </ul>
         </details>
-
+        <details class="collapsible-section" id="contact">
+          <summary>Contact</summary>
+          <ul class="item-list">
+            <li>
+              <span class="item-name"></span>
+              <ul>
+                <li><i class="fa fa-envelope"></i> a(dot)casillasgdp(at)gmail(dot)com</li>
+              </ul>
+            </li>
+            <li>
+              <span class="item-name"></span>
+              <ul>
+                <li><i class="fa fa-github"></i> <a href="https://github.com/AndresCasillas99" target="_blank">GitHub</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="item-name"></span>
+              <ul>
+                <li><i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/andres-casillas-gdp" target="_blank">LinkedIn</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="item-name"></span>
+              <ul>
+                <li><i class="fa fa-youtube-play"></i> <a href="https://www.youtube.com/@ElIrracional" target="_blank">Youtube</a></li>
+              </ul>
+            </li>
+          </ul>
+        </details>
         <h1>Menu</h1>
         <ul class="menu-grid">
-            <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
-            <li><a href="https://github.com/AndresCasillas99" target="_blank" style="color: yellow;font-family:monospace;">🐙 GitHub</a></li>
-            <li><a href="https://www.youtube.com/@ElIrracional" target="_blank" style="color: yellow;font-family:monospace;">▶️ YouTube</a></li>
-
-            <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
-            <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
-            <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
-
-            <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
-            <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
-            <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+          <li><a href="index.html" style="color: yellow;font-family:monospace;">🏠 Home</a></li>
+          <li><a href="cellularautomata.html" style="color: yellow;font-family:monospace;">⚙️ Cellular Automata</a></li>
+          <li><a href="books.html" style="color: yellow;font-family:monospace;">📚 Books</a></li>
+          <li><a href="cv.html" style="color: yellow;font-family:monospace;">📄 CV</a></li>
+          <li><a href="taco.html" style="color: yellow;font-family:monospace;">🌮 Taco</a></li>
+          <li><a href="miscellanueos.html" target="_blank" style="color: yellow;font-family:monospace;">🧩 Miscellaneous</a></li>
+          <li><a href="index.html#contact" style="color: yellow;font-family:monospace;">✉️ Contact</a></li>
+          <li><a href="mexico.html" style="color: yellow;font-family:monospace;">🇲🇽 Mexico</a></li>
         </ul>
     </div>
 </body>
